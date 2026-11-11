@@ -9,7 +9,7 @@ What Nick does in the browser and Xcode to get FoodTrip from this repository to 
       Apple checks the privacy and support URLs.
 - [ ] hello@getfoodtrip.app receives mail (Cloudflare Email Routing → forward to your inbox; the Good Walk runbook,
       `../../dogwalk/playbook/10-site-and-email-runbook.md`, has the steps). The privacy page and the review notes name it.
-- [ ] A support page exists (`docs/support.html`: what the app does, the email). Add it to `sitemap.xml` and the footer.
+- [x] A support page exists (`docs/support.html`, linked from the footer and in `sitemap.xml`).
 - [ ] USPTO search for "FOODTRIP" (see `05-naming.md`).
 
 ## 1. Identifier (developer.apple.com → Certificates, Identifiers & Profiles → Identifiers)

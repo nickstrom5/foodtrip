@@ -111,6 +111,5 @@ the app (links open Safari), no user-generated content.
 ## URLs
 
 - Marketing: https://getfoodtrip.app/
-- Support: https://getfoodtrip.app/ until there is a support page (Apple wants a page with a way to reach you: add
-  `docs/support.html` with the email before submitting)
+- Support: https://getfoodtrip.app/support.html
 - Privacy policy: https://getfoodtrip.app/privacy.html
