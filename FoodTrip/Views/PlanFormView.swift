@@ -31,9 +31,10 @@ struct PlanFormView: View {
                             .fixedSize(horizontal: false, vertical: true)
                         Text("Pick a city, dates, meals and a budget. FoodTrip plans every meal.")
                             .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     .listRowBackground(Color.clear)
-                    .listRowInsets(EdgeInsets(top: 8, leading: 4, bottom: 4, trailing: 4))
+                    .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 4, trailing: 8))
                 }
 
                 Section("Where and when") {

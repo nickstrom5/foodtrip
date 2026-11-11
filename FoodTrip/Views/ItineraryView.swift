@@ -200,7 +200,10 @@ private struct SwapSheet: View {
                         Text("\(p.cu) · \(p.priceLabel) · ~$\(target.slot.cost(p))\(p.hd.map { " · \($0)" } ?? "")").font(.subheadline).foregroundStyle(.secondary)
                         Text(p.hl).font(.caption.weight(.semibold)).foregroundStyle(.secondary)
                     }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
                 }
+                .buttonStyle(.plain)
             }
             .overlay {
                 if options.isEmpty {

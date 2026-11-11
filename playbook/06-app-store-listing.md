@@ -67,7 +67,8 @@ If the price changes in App Store Connect, the PRICE paragraph changes too (and 
 
 ## Screenshots (6.9-inch, 1320 × 2868, in this order)
 
-Capture on an iPhone Pro Max simulator from a Debug build. The `-screen` launch option opens each one with a fixed
+Four are captured in `docs/screenshots/` (itinerary, form, swap, paywall; 2026-11-11, on a fresh simulator named
+"FoodTrip shots"). To retake: capture on an iPhone Pro Max simulator from a Debug build. The `-screen` launch option opens each one with a fixed
 Chicago trip (see `CLAUDE.md`). Use a simulator that is not showing the "Apple Account Required" prompt.
 
 | # | Screen | How to get it | Caption |
