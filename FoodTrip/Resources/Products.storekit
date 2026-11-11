@@ -1,0 +1,38 @@
+{
+  "identifier" : "F00D7A1B",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "1.99",
+      "familyShareable" : true,
+      "internalID" : "6820000001",
+      "localizations" : [
+        {
+          "description" : "Plan as many food trips as you like. Pay once.",
+          "displayName" : "Unlimited Trips",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "app.getfoodtrip.foodtrip.unlimited",
+      "referenceName" : "Unlimited Trips",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

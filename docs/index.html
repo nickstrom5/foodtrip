@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>FoodTrip: Plan Where to Eat on Your Trip</title>
+<meta name="description" content="Pick a city, your dates, how many meals a day and a budget. FoodTrip plans every meal from MICHELIN, James Beard and hand-checked local picks, with reservations and calendar.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://getfoodtrip.app/">
+<meta name="theme-color" content="#FBF6EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17130F" media="(prefers-color-scheme: dark)">
+<meta property="og:site_name" content="FoodTrip">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FoodTrip: Plan Where to Eat on Your Trip">
+<meta property="og:description" content="City, dates, meals a day, budget. FoodTrip plans where to eat, then books it and puts it on your calendar.">
+<meta property="og:url" content="https://getfoodtrip.app/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23D9472B'/%3E%3Cpath d='M32 12c-8.3 0-15 6.5-15 14.6C17 37.5 32 52 32 52s15-14.5 15-25.4C47 18.5 40.3 12 32 12z' fill='%23fff'/%3E%3Cpath d='M27 20v8a3 3 0 0 0 2 2.8V38h2V30.8A3 3 0 0 0 33 28v-8h-1.5v7h-1v-7h-1v7h-1v-7zM37.5 20c-1.7 0-3 2.2-3 5.5 0 2.2.9 3.6 2 4.1V38h2V20z' fill='%23D9472B'/%3E%3C/svg%3E">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"FoodTrip","url":"https://getfoodtrip.app/","applicationCategory":"TravelApplication","operatingSystem":"Web, iOS","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Plan where to eat on a trip: city, dates, meals a day and budget in, a day-by-day food itinerary out."}</script>
+<style>
+  :root {
+    --bg: #FBF6EF; --surface: #fff; --raised: #F3EADD; --line: rgba(40,28,18,.12);
+    --fg: #241B14; --muted: rgba(36,27,20,.72); --faint: rgba(36,27,20,.6);
+    --accent: #D9472B; --accent-ink: #B5361D; --on-accent: #fff; --herb: #2F6B4F; --herb-bg: #E3EFE7; --gold: #8A5A00; --gold-bg: #FBEFD3;
+    --warn: #A3361C; --warn-bg: #FBE4DC;
+    --radius: 18px; --shadow: 0 1px 2px rgba(40,28,18,.06), 0 10px 28px rgba(40,28,18,.07);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17130F; --surface: #221C17; --raised: #2C251F; --line: rgba(255,240,225,.12);
+      --fg: #F6EEE5; --muted: rgba(246,238,229,.74); --faint: rgba(246,238,229,.6);
+      --accent: #F0684B; --accent-ink: #FF8A70; --on-accent: #1A0D08; --herb: #7CC39D; --herb-bg: rgba(124,195,157,.14); --gold: #F2C46B; --gold-bg: rgba(242,196,107,.13);
+      --warn: #FF9A80; --warn-bg: rgba(240,104,75,.16);
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 28px rgba(0,0,0,.25);
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; }
+  a { color: var(--accent-ink); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+  header.top { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; letter-spacing: -.02em; color: var(--fg); text-decoration: none; }
+  .brand svg { width: 32px; height: 32px; }
+  .top .soon { font-size: 14px; color: var(--muted); }
+  h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.05; letter-spacing: -.035em; margin: 24px 0 12px; max-width: 14ch; }
+  .lede { font-size: 18px; color: var(--muted); max-width: 46ch; margin: 0 0 28px; }
+
+  form.card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; display: grid; gap: 18px; grid-template-columns: repeat(6, 1fr); }
+  .field { display: grid; gap: 6px; grid-column: span 6; min-width: 0; }
+  @media (min-width: 720px) {
+    .f-city { grid-column: span 2; } .f-start, .f-end { grid-column: span 2; }
+    .f-meals { grid-column: span 3; } .f-budget { grid-column: span 3; }
+    .f-party { grid-column: span 2; } .f-go { grid-column: span 4; }
+  }
+  label, .label { font-size: 13px; font-weight: 650; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+  select, input[type=date] { width: 100%; font: inherit; color: var(--fg); background: var(--raised); border: 1px solid transparent; border-radius: 12px; padding: 12px; min-height: 48px; }
+  select:focus, input:focus, button:focus-visible, a:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent); outline-offset: 2px; }
+  .seg { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--raised); border-radius: 12px; padding: 4px; gap: 4px; }
+  .seg button { font: inherit; border: 0; background: transparent; color: var(--fg); border-radius: 9px; padding: 8px 4px; min-height: 44px; cursor: pointer; line-height: 1.15; }
+  .seg button small { display: block; font-size: 11px; color: var(--faint); }
+  .seg button[aria-pressed=true] { background: var(--surface); box-shadow: 0 1px 3px rgba(0,0,0,.12); font-weight: 700; }
+  .budget-row { display: flex; align-items: center; gap: 14px; }
+  .budget-row output { font-weight: 800; font-size: 22px; min-width: 4.5ch; font-variant-numeric: tabular-nums; }
+  input[type=range] { flex: 1; accent-color: var(--accent); min-height: 44px; }
+  .hint { font-size: 13px; color: var(--faint); margin: 0; }
+  .stepper { display: flex; align-items: center; gap: 8px; }
+  .stepper button { width: 48px; height: 48px; border-radius: 12px; border: 0; background: var(--raised); color: var(--fg); font-size: 22px; cursor: pointer; }
+  .stepper output { min-width: 3ch; text-align: center; font-weight: 800; font-size: 20px; }
+  .go { display: flex; align-items: end; }
+  .btn { font: inherit; font-weight: 700; border: 0; border-radius: 999px; padding: 12px 20px; min-height: 48px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; }
+  .btn-primary { background: var(--accent); color: var(--on-accent); width: 100%; font-size: 17px; }
+  .btn-primary:hover { filter: brightness(1.05); }
+  .btn-soft { background: var(--raised); color: var(--fg); }
+  .btn-sm { min-height: 40px; padding: 8px 14px; font-size: 14px; }
+
+  #result { margin: 36px 0 24px; }
+  .summary { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+  .summary h2 { margin: 0; font-size: clamp(24px, 4vw, 32px); letter-spacing: -.02em; line-height: 1.15; }
+  .summary p { margin: 4px 0 0; color: var(--muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .day { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px 18px 6px; margin-bottom: 16px; }
+  .day-h { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+  .day-h h3 { margin: 0; font-size: 19px; }
+  .day-h .spend { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 15px; }
+  .day-h .over { color: var(--warn); background: var(--warn-bg); border-radius: 999px; padding: 2px 10px; font-size: 13px; font-weight: 650; }
+  .stop { display: grid; grid-template-columns: 76px 1fr; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .stop:last-child { border-bottom: 0; }
+  .time { font-weight: 800; font-variant-numeric: tabular-nums; font-size: 15px; }
+  .time small { display: block; font-weight: 600; color: var(--faint); font-size: 11px; text-transform: uppercase; letter-spacing: .03em; }
+  .stop h4 { margin: 0; font-size: 18px; line-height: 1.25; }
+  .meta { color: var(--muted); font-size: 14px; margin: 2px 0 6px; }
+  .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); margin: 0 6px 6px 0; }
+  .badge.mich { background: var(--gold-bg); color: var(--gold); }
+  .why { font-size: 14px; color: var(--muted); margin: 0 0 10px; max-width: 62ch; }
+  .stop .actions { margin-bottom: 4px; }
+  .more { font-size: 13px; color: var(--faint); margin: 8px 0 0; } .more a { color: var(--muted); }
+  .alts { margin: 10px 0 0; padding: 10px; background: var(--raised); border-radius: 12px; display: grid; gap: 6px; }
+  .alts button { font: inherit; text-align: left; border: 0; background: var(--surface); color: var(--fg); border-radius: 10px; padding: 10px 12px; cursor: pointer; min-height: 44px; }
+  .alts button span { color: var(--muted); font-size: 13px; }
+  .empty { color: var(--muted); font-size: 14px; padding: 12px 0; }
+  .note { font-size: 13px; color: var(--faint); max-width: 70ch; }
+  .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--fg); color: var(--bg); padding: 10px 18px; border-radius: 999px; font-weight: 600; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+  .how { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 48px 0; }
+  .how div { background: var(--surface); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+  .how h3 { margin: 0 0 6px; font-size: 17px; }
+  .how p { margin: 0; color: var(--muted); font-size: 15px; }
+  footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--faint); font-size: 13px; }
+  footer a { color: var(--muted); }
+  @media print {
+    header.top, form.card, .actions, .how, footer, .alts { display: none !important; }
+    body { background: #fff; color: #000; } .day { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/" aria-label="FoodTrip home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#D9472B"/><path d="M32 12c-8.3 0-15 6.5-15 14.6C17 37.5 32 52 32 52s15-14.5 15-25.4C47 18.5 40.3 12 32 12z" fill="#fff"/><path d="M27 20v8a3 3 0 0 0 2 2.8V38h2V30.8A3 3 0 0 0 33 28v-8h-1.5v7h-1v-7h-1v7h-1v-7zM37.5 20c-1.7 0-3 2.2-3 5.5 0 2.2.9 3.6 2 4.1V38h2V20z" fill="#D9472B"/></svg>
+      FoodTrip
+    </a>
+    <span class="soon">iPhone app coming soon</span>
+  </header>
+
+  <main>
+    <h1>Plan where to eat on your trip.</h1>
+    <p class="lede">Pick a city, your dates, how many meals a day and what you want to spend. FoodTrip plans every meal, then helps you book it and put it on your calendar.</p>
+
+    <form class="card" id="form" novalidate>
+      <div class="field f-city">
+        <label for="city">City</label>
+        <select id="city" required><option value="">Loading cities…</option></select>
+      </div>
+      <div class="field f-start">
+        <label for="start">Arrive</label>
+        <input type="date" id="start" required>
+      </div>
+      <div class="field f-end">
+        <label for="end">Leave</label>
+        <input type="date" id="end" required>
+      </div>
+      <div class="field f-meals">
+        <span class="label" id="meals-label">Meals a day</span>
+        <div class="seg" role="group" aria-labelledby="meals-label" id="meals">
+          <button type="button" data-m="1" aria-pressed="false">1<small>Dinner</small></button>
+          <button type="button" data-m="2" aria-pressed="false">2<small>+ Lunch</small></button>
+          <button type="button" data-m="3" aria-pressed="true">3<small>+ Breakfast</small></button>
+          <button type="button" data-m="4" aria-pressed="false">4<small>+ A treat</small></button>
+        </div>
+      </div>
+      <div class="field f-budget">
+        <label for="budget">Food budget a day, per person</label>
+        <div class="budget-row">
+          <input type="range" id="budget" min="30" max="400" step="10" value="120" aria-describedby="budget-hint">
+          <output id="budget-out" for="budget">$120</output>
+        </div>
+        <p class="hint" id="budget-hint">Food, tax and tip. Drinks not included.</p>
+      </div>
+      <div class="field f-party">
+        <span class="label" id="party-label">People</span>
+        <div class="stepper" role="group" aria-labelledby="party-label">
+          <button type="button" id="party-minus" aria-label="One fewer person">−</button>
+          <output id="party" aria-live="polite">2</output>
+          <button type="button" id="party-plus" aria-label="One more person">+</button>
+        </div>
+      </div>
+      <div class="field f-go go">
+        <button class="btn btn-primary" type="submit" id="go">Plan my food trip</button>
+      </div>
+    </form>
+
+    <section id="result" aria-live="polite" hidden></section>
+
+    <section class="how" aria-label="How FoodTrip works">
+      <div><h3>Real places, not ads</h3><p>Every pick holds a MICHELIN distinction or a James Beard honor, or was checked open by hand for Eats Ranked. No restaurant pays to be here.</p></div>
+      <div><h3>Fits your budget</h3><p>Dinner gets the money first, then lunch, breakfast and a treat. The plan uses a different cuisine each meal and keeps each day's stops close together.</p></div>
+      <div><h3>Book it, keep it</h3><p>Reserve on OpenTable for your date, time and party size, add every meal to your calendar in one tap, or send the plan to whoever you're traveling with.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Restaurant data from <a href="https://eatsranked.com/">Eats Ranked</a>: public records, MICHELIN Guide and James Beard Foundation honors (hand-verified). Prices are estimates. Check hours and book ahead. FoodTrip is not affiliated with OpenTable, the MICHELIN Guide or the James Beard Foundation.</p>
+    <p>FoodTrip runs in your browser. No account, no tracking, nothing about your trip leaves your device unless you share it. <a href="/privacy.html">Privacy</a> · © 2026 FoodTrip</p>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="/planner.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

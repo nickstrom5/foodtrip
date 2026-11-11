@@ -1,0 +1,368 @@
+[
+ {
+  "city": "chicago-il",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-05",
+   "meals": 1,
+   "budget": 60,
+   "seed": 7
+  },
+  "days": [
+   [
+    "dinner:chi-2241029"
+   ],
+   [
+    "dinner:chi-2442874"
+   ]
+  ]
+ },
+ {
+  "city": "chicago-il",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-06",
+   "meals": 2,
+   "budget": 80,
+   "seed": 7
+  },
+  "days": [
+   [
+    "lunch:chi-34368",
+    "dinner:chi-2241029"
+   ],
+   [
+    "lunch:chi-2464411",
+    "dinner:chi-2442874"
+   ],
+   [
+    "lunch:chi-2501098",
+    "dinner:chi-2088562"
+   ]
+  ]
+ },
+ {
+  "city": "chicago-il",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-07",
+   "meals": 3,
+   "budget": 120,
+   "seed": 7
+  },
+  "days": [
+   [
+    "breakfast:chi-2835590",
+    "lunch:chi-3026210",
+    "dinner:chi-2350514"
+   ],
+   [
+    "breakfast:chi-2064551",
+    "lunch:chi-34368",
+    "dinner:chi-2241029"
+   ],
+   [
+    "breakfast:chi-16411",
+    "lunch:chi-1992138",
+    "dinner:chi-2442874"
+   ],
+   [
+    "breakfast:chi-32843",
+    "lunch:chi-2609440",
+    "dinner:chi-2464411"
+   ]
+  ]
+ },
+ {
+  "city": "chicago-il",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-06",
+   "meals": 4,
+   "budget": 250,
+   "seed": 7
+  },
+  "days": [
+   [
+    "breakfast:chi-2064551",
+    "lunch:chi-34368",
+    "snack:chi-2906131",
+    "dinner:chi-2241029"
+   ],
+   [
+    "breakfast:chi-2835590",
+    "lunch:chi-1992138",
+    "snack:chi-32843",
+    "dinner:chi-2350514"
+   ],
+   [
+    "breakfast:chi-2469387",
+    "lunch:chi-2464411",
+    "snack:chi-2637321",
+    "dinner:chi-2442874"
+   ]
+  ]
+ },
+ {
+  "city": "chicago-il",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-05",
+   "meals": 3,
+   "budget": 40,
+   "seed": 7
+  },
+  "days": [
+   [
+    "breakfast:chi-2835590",
+    "lunch:chi-2609440",
+    "dinner:chi-2263820"
+   ],
+   [
+    "breakfast:chi-2906131",
+    "lunch:chi-21500",
+    "dinner:chi-3026210"
+   ]
+  ]
+ },
+ {
+  "city": "austin-tx",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-05",
+   "meals": 1,
+   "budget": 60,
+   "seed": 7
+  },
+  "days": [
+   [
+    "dinner:tx-0b8114b84815"
+   ],
+   [
+    "dinner:tx-02059dac56b9"
+   ]
+  ]
+ },
+ {
+  "city": "austin-tx",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-06",
+   "meals": 2,
+   "budget": 80,
+   "seed": 7
+  },
+  "days": [
+   [
+    "lunch:tx-bf5543745599",
+    "dinner:tx-0b8114b84815"
+   ],
+   [
+    "lunch:tx-862655330dfc",
+    "dinner:tx-02059dac56b9"
+   ],
+   [
+    "lunch:tx-851f9749f731",
+    "dinner:tx-8885ccdaf431"
+   ]
+  ]
+ },
+ {
+  "city": "austin-tx",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-07",
+   "meals": 3,
+   "budget": 120,
+   "seed": 7
+  },
+  "days": [
+   [
+    "breakfast:tx-ee0dc4693d20",
+    "lunch:tx-bf5543745599",
+    "dinner:tx-0b8114b84815"
+   ],
+   [
+    "breakfast:tx-4bd9c7c49915",
+    "lunch:tx-f8393c3ec475",
+    "dinner:tx-d3de68e8fd4c"
+   ],
+   [
+    "breakfast:tx-aad3e11e3372",
+    "lunch:tx-02059dac56b9",
+    "dinner:tx-862655330dfc"
+   ],
+   [
+    "breakfast:tx-78a46b464241",
+    "lunch:tx-e917ccf310b4",
+    "dinner:tx-c39681cedc64"
+   ]
+  ]
+ },
+ {
+  "city": "austin-tx",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-06",
+   "meals": 4,
+   "budget": 250,
+   "seed": 7
+  },
+  "days": [
+   [
+    "breakfast:tx-ee0dc4693d20",
+    "lunch:tx-bf5543745599",
+    "snack:tx-78a46b464241",
+    "dinner:tx-0b8114b84815"
+   ],
+   [
+    "breakfast:tx-4bd9c7c49915",
+    "lunch:tx-862655330dfc",
+    "snack:tx-aad3e11e3372",
+    "dinner:tx-d3de68e8fd4c"
+   ],
+   [
+    "breakfast:tx-d9e4863cd03b",
+    "lunch:tx-c39681cedc64",
+    "snack:tx-fc7e7f614511",
+    "dinner:tx-8885ccdaf431"
+   ]
+  ]
+ },
+ {
+  "city": "austin-tx",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-05",
+   "meals": 3,
+   "budget": 40,
+   "seed": 7
+  },
+  "days": [
+   [
+    "breakfast:tx-ee0dc4693d20",
+    "lunch:tx-84ac824fbf71",
+    "dinner:tx-921fd388319e"
+   ],
+   [
+    "breakfast:tx-4bd9c7c49915",
+    "lunch:tx-bf5543745599",
+    "dinner:tx-f8393c3ec475"
+   ]
+  ]
+ },
+ {
+  "city": "boise-id",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-05",
+   "meals": 1,
+   "budget": 60,
+   "seed": 7
+  },
+  "days": [
+   [
+    "dinner:id-0afc3732cb9e"
+   ],
+   [
+    "dinner:id-d9ab21f4371c"
+   ]
+  ]
+ },
+ {
+  "city": "boise-id",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-06",
+   "meals": 2,
+   "budget": 80,
+   "seed": 7
+  },
+  "days": [
+   [
+    "lunch:id-7ebe3451addf",
+    "dinner:id-0afc3732cb9e"
+   ],
+   [
+    "lunch:id-9d5a40da90ef",
+    "dinner:id-d9ab21f4371c"
+   ],
+   [
+    "lunch:id-79a614111139",
+    "dinner:id-deb740922b96"
+   ]
+  ]
+ },
+ {
+  "city": "boise-id",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-07",
+   "meals": 3,
+   "budget": 120,
+   "seed": 7
+  },
+  "days": [
+   [
+    "lunch:id-60f761ee7446",
+    "dinner:id-0afc3732cb9e"
+   ],
+   [
+    "lunch:id-9d5a40da90ef",
+    "dinner:id-d9ab21f4371c"
+   ],
+   [
+    "lunch:id-79a614111139",
+    "dinner:id-7ebe3451addf"
+   ],
+   [
+    "lunch:id-7a2768232672",
+    "dinner:id-deb740922b96"
+   ]
+  ]
+ },
+ {
+  "city": "boise-id",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-06",
+   "meals": 4,
+   "budget": 250,
+   "seed": 7
+  },
+  "days": [
+   [
+    "lunch:id-60f761ee7446",
+    "dinner:id-0afc3732cb9e"
+   ],
+   [
+    "lunch:id-9d5a40da90ef",
+    "dinner:id-d9ab21f4371c"
+   ],
+   [
+    "lunch:id-79a614111139",
+    "dinner:id-7ebe3451addf"
+   ]
+  ]
+ },
+ {
+  "city": "boise-id",
+  "opts": {
+   "start": "2026-12-04",
+   "end": "2026-12-05",
+   "meals": 3,
+   "budget": 40,
+   "seed": 7
+  },
+  "days": [
+   [
+    "lunch:id-ab6f254607d2",
+    "dinner:id-79a614111139"
+   ],
+   [
+    "lunch:id-fd1b29c4a958",
+    "dinner:id-5d5d90534882"
+   ]
+  ]
+ }
+]
