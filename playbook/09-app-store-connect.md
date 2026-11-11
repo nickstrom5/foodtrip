@@ -3,11 +3,24 @@
 What Nick does in the browser and Xcode to get FoodTrip from this repository to the App Store. The listing text is in
 `06-app-store-listing.md`. Tick each box as it is done.
 
+## Status (2026-11-11)
+
+Done in App Store Connect: App ID `app.getfoodtrip.foodtrip` registered; app record **FoodTrip: Restaurant Planner**
+created (Apple ID **6833681053**, SKU `foodtrip-ios`); in-app purchase **Unlimited Trips** created (Apple ID 6833680969,
+Non-Consumable, $1.99 in 175 countries, English display name and description, Family Sharing left **off** because it
+cannot be turned off again); version 1.0.0 page saved (promotional text, description, keywords, support and marketing
+URLs, copyright, review notes, sign-in not required, manual release); subtitle and categories saved; privacy policy URL
+saved and data collection answered "No" (**not yet published**).
+
+Still to do there: press **Publish** on App Privacy; age rating; content rights; app price (Free) and availability;
+upload the screenshots in `docs/screenshots/` (and the paywall one as the purchase's review screenshot); App Review
+contact name, phone and email; upload a build and select it and the purchase; submit.
+
 ## Before you start
 
-- [ ] getfoodtrip.app loads over HTTPS (DNS records in Cloudflare, then "Enforce HTTPS" in the repo's Pages settings).
+- [x] getfoodtrip.app loads over HTTPS (DNS records in Cloudflare, then "Enforce HTTPS" in the repo's Pages settings).
       Apple checks the privacy and support URLs.
-- [ ] hello@getfoodtrip.app receives mail (Cloudflare Email Routing → forward to your inbox; the Good Walk runbook,
+- [x] hello@getfoodtrip.app forwards to Gmail (rule active; send a test) (Cloudflare Email Routing → forward to your inbox; the Good Walk runbook,
       `../../dogwalk/playbook/10-site-and-email-runbook.md`, has the steps). The privacy page and the review notes name it.
 - [x] A support page exists (`docs/support.html`, linked from the footer and in `sitemap.xml`).
 - [ ] USPTO search for "FOODTRIP" (see `05-naming.md`).
@@ -33,7 +46,7 @@ What Nick does in the browser and Xcode to get FoodTrip from this repository to 
 - [ ] Type **Non-Consumable**. Reference name `Unlimited Trips`. Product ID `app.getfoodtrip.foodtrip.unlimited`
       (it must match `Store.unlimitedID` exactly; it can never be changed or reused).
 - [ ] Price: **$1.99** (USD base, let Apple set the other storefronts).
-- [ ] Family Sharing: on (the local `Products.storekit` says so too; turn both off together if you'd rather not).
+- [ ] Family Sharing: left off (it cannot be turned off once on; `Products.storekit` matches). Turn both on if wanted.
 - [ ] Localization (English U.S.): display name `Unlimited Trips`, description
       `Plan as many food trips as you like. Pay once.`
 - [ ] Review screenshot: the paywall (`-screen paywall`, 1320 × 2868).
