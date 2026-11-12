@@ -10,6 +10,7 @@ same plan for the same inputs.
 - `FoodTrip/` — the iPhone app (SwiftUI, iOS 17+). `Models/Planner.swift` is `docs/planner.js` in Swift.
 - `FoodTripTests/` — unit tests, including one that proves the app's plans equal the website's.
 - `scripts/` — `build-cities.py` (data), `test-planner.mjs` (web planner checks + the shared test vectors),
+  `make-city-pages.mjs` (the static city pages and sitemap), `qa-site.py` (SEO and link checks on every page),
   `make-assets.py` and `make-brand.swift` (colors, icons).
 - `playbook/` — internal notes, not served. `05-naming.md` is the name and domain check.
 
