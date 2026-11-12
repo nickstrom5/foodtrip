@@ -39,7 +39,7 @@ REAL PLACES, NOT ADS
 Every restaurant in FoodTrip holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked open by hand for Eats Ranked. No restaurant pays to be listed.
 
 MADE FOR YOUR TRIP
-• 40 US cities, from New York and Chicago to Austin, New Orleans and Honolulu
+• 42 US cities, from New York and Chicago to Austin, New Orleans and Honolulu
 • 1 to 4 meals a day: dinner, lunch, breakfast and an afternoon treat
 • A food budget per person, per day. Dinner gets the money first
 • A different cuisine each meal, and no place twice

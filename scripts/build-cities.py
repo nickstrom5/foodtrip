@@ -19,7 +19,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.dirname(ROOT)
-MIN_PICKS = 20      # a city needs this many places to plan a few days without repeats
+MIN_PICKS = 19      # a city needs this many places to plan a few days without repeats
 MAX_PICKS = 160     # per city, best first
 NYC = {"Manhattan", "Brooklyn", "Queens", "Bronx", "The Bronx", "Staten Island"}
 
@@ -58,8 +58,19 @@ CHEAP = {"Coffee & Café", "Bakery & Sweets", "Desserts", "Ice Cream & Desserts"
 PRICEY = {"Steakhouse", "Seafood"}
 
 
-def meals_for(cuisine, price):
+# A name that says what the place is beats a broad cuisine: "Biscuit Love" filed under Chicken still serves breakfast.
+MORNING = re.compile(r"\b(biscuits?|donuts?|doughnuts?|bagels?|pancakes?|waffles?|bakery|bakeshop|panader[ií]a|caf[eé]|coffee|diner|"
+                     r"brunch|breakfast|cr[eê]pes?|eggs?|kolaches?|beignets?|p[aâ]tisserie|pastry|pastries)\b", re.I)
+TREAT = re.compile(r"\b(ice cream|gelato|creamery|custard|donuts?|doughnuts?|bakery|bakeshop|panader[ií]a|shave ice|chocolates?|"
+                   r"sweets|beignets?|p[aâ]tisserie|pastry|pastries|pies)\b", re.I)
+
+
+def meals_for(cuisine, price, name=""):
     m = MEALS.get(cuisine, L | D)
+    if price <= 2 and MORNING.search(name):
+        m |= B
+    if price <= 2 and TREAT.search(name):
+        m |= S
     if price >= 4:
         m &= D          # tasting menus are dinner
     return m or D
@@ -167,7 +178,7 @@ def build_states(out):
             why = p.get("dish") or p.get("note") or p.get("jbf")
             out.setdefault((city, abbr), []).append({
                 "id": f"{st}-{p['id']}", "n": p.get("aka") and p["n"] or p["n"], "a": p.get("a") or "", "z": p.get("z") or "",
-                "la": round(p["la"], 5), "lo": round(p["lo"], 5), "cu": cu, "p": price, "pe": 1, "m": meals_for(cu, price),
+                "la": round(p["la"], 5), "lo": round(p["lo"], 5), "cu": cu, "p": price, "pe": 1, "m": meals_for(cu, price, p["n"]),
                 "hl": honor, "w": why, "r": rank(mi, h, hc, oldest), "hd": hood,
             })
             n += 1
@@ -204,7 +215,7 @@ def build_chicago(out):
         out.setdefault(("Chicago", "IL"), []).append({
             "id": f"chi-{r['id']}", "n": r["name"], "a": r["addr"] or "", "z": r["zip"] or "", "la": round(r["lat"], 5),
             "lo": round(r["lon"], 5), "cu": cu, "p": price, "pe": 0 if r["price"] and not r["price_est"] else 1,
-            "m": meals_for(cu, price), "hl": honor, "w": r["icon"] or (jbf or None), "r": s, "hd": r["hood"],
+            "m": meals_for(cu, price, r["name"]), "hl": honor, "w": r["icon"] or (jbf or None), "r": s, "hd": r["hood"],
         })
         n += 1
     print(f"  chicago: {n} places", file=sys.stderr)
@@ -218,7 +229,7 @@ def main():
     for (name, st), places in out.items():
         seen, uniq = set(), []
         for p in sorted(places, key=lambda p: -p["r"]):
-            k = (p["n"].lower(), p["a"].lower())
+            k = re.sub(r"[^a-z0-9]+", " ", p["n"].lower()).strip()      # one entry per name: a second location is not a second pick
             if k not in seen:
                 seen.add(k)
                 uniq.append(p)

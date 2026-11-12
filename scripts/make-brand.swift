@@ -44,6 +44,26 @@ func icon(_ size: Int, rounded: Bool) -> Data {
     return rep.representation(using: .png, properties: [:])!
 }
 
+/// The link-preview image (1200 x 630): the icon, the name and the one-line pitch on the site's cream background.
+func og() -> Data {
+    let w = 1200, h = 630
+    let rep = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: w, pixelsHigh: h, bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true,
+                               isPlanar: false, colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0)!
+    NSGraphicsContext.saveGraphicsState()
+    NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: rep)
+    NSColor(srgbRed: 0xFB / 255, green: 0xF6 / 255, blue: 0xEF / 255, alpha: 1).setFill()
+    NSRect(x: 0, y: 0, width: w, height: h).fill()
+    if let mark = NSImage(data: icon(360, rounded: true)) { mark.draw(in: NSRect(x: 90, y: 135, width: 360, height: 360)) }
+    let ink = NSColor(srgbRed: 0x24 / 255, green: 0x1B / 255, blue: 0x14 / 255, alpha: 1)
+    let para = NSMutableParagraphStyle(); para.lineHeightMultiple = 0.95
+    NSAttributedString(string: "FoodTrip", attributes: [.font: NSFont.systemFont(ofSize: 110, weight: .heavy), .foregroundColor: ink, .kern: -3])
+        .draw(at: NSPoint(x: 520, y: 330))
+    NSAttributedString(string: "Plan where to eat\non your trip.", attributes: [.font: NSFont.systemFont(ofSize: 54, weight: .semibold),
+        .foregroundColor: ink.withAlphaComponent(0.72), .paragraphStyle: para]).draw(in: NSRect(x: 524, y: 150, width: 640, height: 170))
+    NSGraphicsContext.restoreGraphicsState()
+    return rep.representation(using: .png, properties: [:])!
+}
+
 let root = FileManager.default.currentDirectoryPath
 func write(_ data: Data, _ path: String) {
     let url = URL(fileURLWithPath: root).appendingPathComponent(path)
@@ -56,3 +76,4 @@ write(icon(180, rounded: false), "docs/apple-touch-icon.png")
 write(icon(192, rounded: true), "docs/icon-192.png")
 write(icon(512, rounded: true), "docs/icon-512.png")
 write(icon(32, rounded: true), "docs/favicon-32.png")
+write(og(), "docs/og.png")

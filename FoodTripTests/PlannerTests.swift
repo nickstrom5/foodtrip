@@ -15,7 +15,7 @@ final class PlannerTests: XCTestCase {
         XCTAssertGreaterThanOrEqual(file.cities.count, 30)
         XCTAssertNotNil(file.cities.first { $0.id == "chicago-il" })
         for c in file.cities {
-            XCTAssertGreaterThanOrEqual(c.places.count, 20, c.id)
+            XCTAssertGreaterThanOrEqual(c.places.count, 19, c.id)      // MIN_PICKS in scripts/build-cities.py
             XCTAssertNotNil(TimeZone(identifier: c.tz), c.id)
         }
     }

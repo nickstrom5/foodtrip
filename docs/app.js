@@ -84,7 +84,10 @@
   function readHash() {
     const q = new URLSearchParams(location.hash.slice(1));
     if (!q.get("c")) return false;
-    state.city = q.get("c"); state.start = q.get("s") || state.start; state.end = q.get("e") || state.end;
+    // a mangled link falls back to the form's own dates instead of leaving it half filled
+    const day = (v) => (/^\d{4}-\d{2}-\d{2}$/.test(v || "") && !isNaN(Date.parse(v + "T12:00:00Z")) && P.addDays(v, 0) === v ? v : null);
+    state.city = q.get("c"); state.start = day(q.get("s")) || state.start; state.end = day(q.get("e")) || state.end;
+    if (state.end < state.start) state.end = state.start;
     state.meals = Math.min(4, Math.max(1, +q.get("m") || 3)); state.budget = Math.min(400, Math.max(30, +q.get("b") || 120));
     state.party = Math.min(20, Math.max(1, +q.get("n") || 2)); state.seed = +q.get("r") || 1;
     state.locked = {};
@@ -220,6 +223,9 @@
   $("meals").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; state.meals = +b.dataset.m; syncForm(); });
   $("party-minus").addEventListener("click", () => { state.party = Math.max(1, state.party - 1); syncForm(); });
   $("party-plus").addEventListener("click", () => { state.party = Math.min(20, state.party + 1); syncForm(); });
+
+  // a pasted or edited link in an open tab replans too
+  window.addEventListener("hashchange", () => { if (cities.length && readHash()) { if (!cities.some((c) => c.id === state.city)) state.city = "chicago-il"; syncForm(); run(false); } });
 
   (async function init() {
     [state.start, state.end] = nextWeekend();
