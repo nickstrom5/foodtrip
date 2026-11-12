@@ -30,10 +30,13 @@ after `scripts/build-cities.py` or any change to `docs/planner.js`, then `python
 
 ## After launch (Nick)
 
-- [ ] Google Search Console: add `getfoodtrip.app` as a Domain property (DNS TXT record in Cloudflare), then submit
-      `https://getfoodtrip.app/sitemap.xml`.
-- [ ] Bing Webmaster Tools: import the site from Search Console and submit the same sitemap.
-- [ ] Request indexing for the home page, `/cities/` and three or four of the biggest city pages.
+- [x] Google Search Console (2026-11-12): `getfoodtrip.app` added as a Domain property and verified by a
+      `google-site-verification` TXT record in Cloudflare (keep that record, or verification lapses). Sitemap
+      submitted; Google read 47 pages. Indexing requested for `/`, `/cities/` and `/cities/chicago-il.html`.
+- [ ] Bing Webmaster Tools: sign in at bing.com/webmasters, add the site (importing from Search Console is quickest)
+      and submit `https://getfoodtrip.app/sitemap.xml`. Not done: it needs a Microsoft sign-in.
+- [ ] In a week, check Search Console → Pages for anything "Crawled, not indexed", and request indexing for a few
+      more city pages (the daily quota is about ten).
 - [ ] When the iPhone app is on the App Store: uncomment the `apple-itunes-app` meta in `docs/index.html` (the ID,
       6833681053, is already filled in), replace "iPhone app coming soon" with the App Store link, and change the
       screenshots section's "coming to the App Store" line.
