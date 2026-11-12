@@ -13,6 +13,7 @@ No network. Run from the foodtrip/ folder:  python3 scripts/build-cities.py
 """
 import glob
 import json
+import math
 import os
 import re
 import sys
@@ -221,10 +222,52 @@ def build_chicago(out):
     print(f"  chicago: {n} places", file=sys.stderr)
 
 
+METRO_KM = 20       # a town this close to a bigger neighbour is planned as part of it (25 put Bremerton in Seattle, a ferry away)
+METRO_CORE = 8      # a metro is named after a city with at least this many picks of its own, not after its biggest suburb
+# clusters that pass the numbers but are not somewhere people plan a trip to by that name
+NOT_A_DESTINATION = {("Oconomowoc", "WI"), ("Groton", "CT")}
+
+
+def km(a, b):
+    r = math.pi / 180
+    x = math.sin((b[0] - a[0]) * r / 2) ** 2 + math.cos(a[0] * r) * math.cos(b[0] * r) * math.sin((b[1] - a[1]) * r / 2) ** 2
+    return 2 * 6371 * math.asin(math.sqrt(x))
+
+
+def merge_metros(out):
+    """A trip to Phoenix eats in Scottsdale too. Every town with fewer than MIN_PICKS picks joins the nearest town that
+    has more picks and is within METRO_KM (centre to centre); its name becomes the neighborhood of its places. Towns
+    that already stand on their own (Oakland next to San Francisco, St. Paul next to Minneapolis) are left alone."""
+    centre = {k: (sum(p["la"] for p in v) / len(v), sum(p["lo"] for p in v) / len(v)) for k, v in out.items()}
+    size = {k: len(v) for k, v in out.items()}
+    roots, merged, joined = [], {}, {}
+    for k in sorted(out, key=lambda k: (-size[k], k)):
+        near = None
+        if size[k] < MIN_PICKS:
+            best = min(roots, key=lambda r: km(centre[k], centre[r]), default=None)
+            if best and km(centre[k], centre[best]) <= METRO_KM:
+                near = best
+        if near is None:
+            merged[k] = list(out[k])
+            if size[k] >= METRO_CORE and k not in NOT_A_DESTINATION:
+                roots.append(k)
+        else:
+            for p in out[k]:
+                merged[near].append({**p, "hd": p.get("hd") or (k[0] if k[0].isascii() else None)})
+            joined.setdefault(near, []).append(f"{k[0]} ({size[k]})")
+    for k in NOT_A_DESTINATION:
+        merged.pop(k, None)
+    for r, towns in sorted(joined.items(), key=lambda x: -len(merged[x[0]])):
+        if len(merged[r]) >= MIN_PICKS:
+            print(f"  metro {r[0]}, {r[1]}: {size[r]} + {', '.join(towns)}", file=sys.stderr)
+    return merged
+
+
 def main():
     out = {}
     build_states(out)
     build_chicago(out)
+    out = merge_metros(out)
     cities = []
     for (name, st), places in out.items():
         seen, uniq = set(), []

@@ -98,7 +98,11 @@ function cityDescription(c, counts, full) {
   const tails = full ? [" Breakfast, lunch and dinner, planned around your budget.", " Three meals a day, planned around your budget."] : [" Lunch and dinner every day, planned around your budget."];
   for (const tail of [...tails, " Planned around your budget.", ""]) {
     const d = base + tail;
-    if (d.length <= 160) return d.length >= 140 ? d : (d + " Free to use, no account.").slice(0, 160);
+    if (d.length > 160) continue;
+    // a city with no honors has a short first sentence: add true, useful endings until the length is in range
+    let out = d;
+    for (const pad of [" Free to use, no account.", " Swap any stop.", " Book and add to your calendar."]) if (out.length < 140 && (out + pad).length <= 160) out += pad;
+    return out;
   }
   return base.slice(0, 157) + "…";
 }

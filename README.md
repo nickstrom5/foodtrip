@@ -16,7 +16,7 @@ same plan for the same inputs.
 
 ## What it does
 
-1. **Inputs:** city (42 US cities), arrive and leave dates (up to 14 days), 1–4 meals a day, a food budget per person per
+1. **Inputs:** city (53 US cities), arrive and leave dates (up to 14 days), 1–4 meals a day, a food budget per person per
    day, party size.
 2. **Plan:** for each day, dinner is chosen first, then lunch, breakfast and an afternoon treat, each from places that suit
    that meal. A pick has to fit what is left of the day's budget after setting aside the cheapest option for every meal
@@ -42,7 +42,9 @@ count is kept in `UserDefaults`, so deleting the app resets it.
 
 `python3 scripts/build-cities.py` reads the Eats Ranked apps' bundled data in the sibling folders (`../<st>-eats/`,
 `../chi-eats/`) and keeps the places worth a trip: a MICHELIN distinction, a James Beard honor, a hand-checked Eats
-Ranked pick, or (Chicago only) a well-reviewed independent. Chains are dropped. A city needs 19 places and 8 dinner
+Ranked pick, or (Chicago only) a well-reviewed independent. Chains are dropped. A town with too few picks to stand alone joins the nearest larger city within 20 km
+(Scottsdale counts for Phoenix, Miami Beach for Miami, Dearborn for Detroit) and its name becomes the neighborhood of
+its places; a metro is only named after a city with 8 picks of its own. A city needs 19 places and 8 dinner
 places to be listed. It writes `docs/data/` and `FoodTrip/Resources/cities.json`.
 
 Two things in the data are estimates, and the app says so:
