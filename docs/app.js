@@ -218,11 +218,13 @@
   ["city", "start", "end"].forEach((id) => $(id).addEventListener("change", () => {
     if (id === "start" && $("end").value < $("start").value) $("end").value = $("start").value;
     $("end").min = $("start").value;
+    // keep the choice: the meals and people buttons redraw the form from `state`, which used to put the old city and dates back
+    readForm();
   }));
   $("budget").addEventListener("input", () => { state.budget = +$("budget").value; $("budget-out").textContent = "$" + state.budget; });
-  $("meals").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; state.meals = +b.dataset.m; syncForm(); });
-  $("party-minus").addEventListener("click", () => { state.party = Math.max(1, state.party - 1); syncForm(); });
-  $("party-plus").addEventListener("click", () => { state.party = Math.min(20, state.party + 1); syncForm(); });
+  $("meals").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; readForm(); state.meals = +b.dataset.m; syncForm(); });
+  $("party-minus").addEventListener("click", () => { readForm(); state.party = Math.max(1, state.party - 1); syncForm(); });
+  $("party-plus").addEventListener("click", () => { readForm(); state.party = Math.min(20, state.party + 1); syncForm(); });
 
   // a pasted or edited link in an open tab replans too
   window.addEventListener("hashchange", () => { if (cities.length && readHash()) { if (!cities.some((c) => c.id === state.city)) state.city = "chicago-il"; syncForm(); run(false); } });

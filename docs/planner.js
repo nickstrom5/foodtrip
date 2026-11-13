@@ -105,7 +105,8 @@
             let s = p.r + jitter.get(p.id);
             s -= 12 * (cuisineUses.get(p.cu) || 0);
             if (today.has(p.cu)) s -= 25;
-            if (anchor) s -= Math.min(30, 2.5 * km(anchor, p));
+            // 2.5 points a km, up to 36 km: capping it lower let a place 30 km out score like one 12 km out
+            if (anchor) s -= Math.min(90, 2.5 * km(anchor, p));
             // a splurge-sized budget should get a splurge: favour using what's there at dinner
             if (slot === "dinner") s += 6 * (c / Math.max(left, 1));
             if (s > bestScore) { bestScore = s; best = p; }
@@ -139,7 +140,7 @@
     const anchor = others.length ? others[others.length - 1].place : null;
     return city.places
       .filter((p) => p.m & bit && !used.has(p.id))
-      .map((p) => ({ p, s: p.r - (cost(p, slot) > left ? 40 : 0) - (anchor ? Math.min(30, 2.5 * km(anchor, p)) : 0) }))
+      .map((p) => ({ p, s: p.r - (cost(p, slot) > left ? 40 : 0) - (anchor ? Math.min(90, 2.5 * km(anchor, p)) : 0) }))
       .sort((a, b) => b.s - a.s || (a.p.id < b.p.id ? -1 : 1))
       .slice(0, n || 5)
       .map((x) => x.p);

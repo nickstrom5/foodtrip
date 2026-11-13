@@ -130,7 +130,7 @@ enum Planner {
                         var s = Double(p.r) + (jitter[p.id] ?? 0)
                         s -= 12 * Double(cuisineUses[p.cu] ?? 0)
                         if today.contains(p.cu) { s -= 25 }
-                        if let anchor { s -= min(30, 2.5 * km(anchor, p)) }
+                        if let anchor { s -= min(90, 2.5 * km(anchor, p)) }
                         // a splurge-sized budget should get a splurge: favour using what's there at dinner
                         if slot == .dinner { s += 6 * (Double(c) / Double(max(left, 1))) }
                         if s > bestScore { bestScore = s; best = p }
@@ -163,7 +163,7 @@ enum Planner {
         for p in city.places where p.m & slot.bit != 0 && !used.contains(p.id) {
             var s = Double(p.r)
             if slot.cost(p) > left { s -= 40 }
-            if let anchor { s -= min(30, 2.5 * km(anchor, p)) }
+            if let anchor { s -= min(90, 2.5 * km(anchor, p)) }
             scored.append((p, s))
         }
         scored.sort { a, b in a.score != b.score ? a.score > b.score : a.place.id < b.place.id }
