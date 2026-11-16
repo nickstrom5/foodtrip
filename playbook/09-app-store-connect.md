@@ -77,6 +77,10 @@ contact name, phone and email; upload a build and select it and the purchase; su
 
 ## 8. Build and TestFlight
 
+Upload with the shared script, which pins the release Xcode (`/Applications/Xcode 1.app`; a beta-built archive is
+refused) and lets Apple assign the build number: `bash ../scripts/testflight.sh foodtrip` from this folder's parent.
+First upload: 2026-11-16, version 1.0.0, built with Xcode 27.2 (27B52).
+
 - [ ] `xcodegen generate`, open `FoodTrip.xcodeproj`, select "Any iOS Device", Product → Archive, Distribute App →
       App Store Connect. The team is already set in `project.yml`. Bump `CURRENT_PROJECT_VERSION` for each upload.
 - [ ] Install from TestFlight on a real iPhone and check the things the simulator could not:
