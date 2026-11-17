@@ -50,6 +50,7 @@
     return `https://calendar.google.com/calendar/render?${q}`;
   }
   const details = (p, day, stop) => [p.hl, `${p.cu} · ${P.PRICE[p.p]} · about $${stop.cost} a person`, p.w, `Book: ${openTable(p, day, stop)}`, "Planned with FoodTrip · getfoodtrip.app"].filter(Boolean).join("\n");
+  const MEAL_NAME = { breakfast: "breakfast", lunch: "lunch", snack: "afternoon treat", dinner: "dinner" };
   const needsBooking = (stop) => (stop.slot === "dinner" || stop.slot === "lunch") && stop.place.p >= 2;
 
   // ---- calendar file
@@ -146,7 +147,7 @@
       </div></div>`;
     const days = plan.days.map((day) => {
       const stops = day.stops.map((stop) => stopHTML(day, stop)).join("");
-      const missing = day.missing.length ? `<p class="empty">No ${day.missing.join(" or ")} pick left in ${esc(current.name)} for this day.</p>` : "";
+      const missing = day.missing.length ? `<p class="empty">No ${day.missing.map((m) => MEAL_NAME[m] || m).join(" or ")} pick left in ${esc(current.name)} for this day.</p>` : "";
       return `<article class="day"><div class="day-h"><h3>Day ${day.index + 1} · ${esc(fmtDay(day.date))}</h3>
         <span class="spend">about $${day.spent} a person${day.over ? ` <span class="over">$${day.spent - plan.budget} over budget</span>` : ""}</span></div>${stops}${missing}</article>`;
     }).join("");
@@ -159,18 +160,22 @@
     const book = needsBooking(stop)
       ? `<a class="btn btn-primary btn-sm" style="width:auto" target="_blank" rel="noopener noreferrer" href="${esc(openTable(p, day, stop))}">Reserve for ${state.party}</a>`
       : `<span class="badge" style="align-self:center;margin:0">Walk in</span>`;
-    const more = (needsBooking(stop) ? `<a target="_blank" rel="noopener noreferrer" href="${esc(otherWays(p))}">Other ways to book</a> · ` : "")
-      + `<a target="_blank" rel="noopener noreferrer" href="${esc(gcal(p, day, stop))}">Add to Google Calendar</a>`;
+    // one row: the main action, Swap, and everything else behind "More" (a long row of buttons crowded phones)
+    const links = [
+      `<a target="_blank" rel="noopener noreferrer" href="${esc(maps(p))}">Directions</a>`,
+      `<button type="button" class="linkish" data-act="ics-one" data-k="${k}">Add to calendar (.ics)</button>`,
+      `<a target="_blank" rel="noopener noreferrer" href="${esc(gcal(p, day, stop))}">Add to Google Calendar</a>`,
+      needsBooking(stop) ? `<a target="_blank" rel="noopener noreferrer" href="${esc(otherWays(p))}">Other ways to book</a>` : "",
+    ].filter(Boolean).join("");
     return `<div class="stop" id="stop-${k}"><div class="time">${esc(fmtTime(stop.time))}<small>${esc(stop.label)}</small></div><div>
       <h4>${esc(p.n)}</h4>
       <p class="meta">${esc(p.cu)} · ${P.PRICE[p.p]} · ~$${stop.cost}${p.hd ? " · " + esc(p.hd) : ""}</p>
       <span class="badge${mich ? " mich" : ""}">${esc(p.hl)}</span>
       ${p.w ? `<p class="why">${esc(p.w)}</p>` : ""}
       <div class="actions">${book}
-        <a class="btn btn-soft btn-sm" target="_blank" rel="noopener noreferrer" href="${esc(maps(p))}">Directions</a>
-        <button class="btn btn-soft btn-sm" data-act="ics-one" data-k="${k}">Add to calendar</button>
         <button class="btn btn-soft btn-sm" data-act="swap" data-k="${k}" aria-expanded="false">Swap</button>
-      </div><p class="more">${more}</p></div></div>`;
+        <details class="more"><summary class="btn btn-soft btn-sm">More</summary><div class="more-links">${links}</div></details>
+      </div></div></div>`;
   }
   function showAlts(btn) {
     const [d, slot] = btn.dataset.k.split("-");

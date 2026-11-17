@@ -32,8 +32,12 @@
   :root { --bg: #FBF6EF; --fg: #241B14; --muted: rgba(36,27,20,.72); --accent-ink: #B5361D; --line: rgba(40,28,18,.12); color-scheme: light; }
   @media (prefers-color-scheme: dark) { :root { --bg: #17130F; --fg: #F6EEE5; --muted: rgba(246,238,229,.74); --accent-ink: #FF8A70; --line: rgba(255,240,225,.12); color-scheme: dark; } }
   body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 32px 16px 64px; }
-  h1 { font-size: 34px; letter-spacing: -.02em; margin: 24px 0 8px; } h2 { font-size: 20px; margin: 28px 0 6px; }
+  main { max-width: 680px; margin: 0 auto; padding: 0 16px 64px; }
+  header.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding: 16px 0 8px; }
+  .brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 20px; letter-spacing: -.02em; color: var(--fg); text-decoration: none; }
+  header.top nav { display: flex; gap: 16px; font-size: 15px; } header.top nav a { color: var(--fg); }
+
+  h1 { font-size: 34px; letter-spacing: -.02em; margin: 20px 0 8px; } h2 { font-size: 20px; margin: 28px 0 6px; }
   a { color: var(--accent-ink); } .muted { color: var(--muted); }
   .contact { border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin: 20px 0; }
   .contact p { margin: 0; }
@@ -42,7 +46,7 @@
 </head>
 <body>
 <main>
-  <p><a href="/">← FoodTrip</a></p>
+  <header class="top"><a class="brand" href="/" aria-label="FoodTrip home"><svg viewBox="0 0 64 64" aria-hidden="true" width="28" height="28"><rect width="64" height="64" rx="14" fill="#D9472B"/><path d="M32 12c-8.3 0-15 6.5-15 14.6C17 37.5 32 52 32 52s15-14.5 15-25.4C47 18.5 40.3 12 32 12z" fill="#fff"/><path d="M27 20v8a3 3 0 0 0 2 2.8V38h2V30.8A3 3 0 0 0 33 28v-8h-1.5v7h-1v-7h-1v7h-1v-7zM37.5 20c-1.7 0-3 2.2-3 5.5 0 2.2.9 3.6 2 4.1V38h2V20z" fill="#D9472B"/></svg>FoodTrip</a><nav aria-label="Site"><a href="/">Plan a trip</a><a href="/cities/">Cities</a><a href="/support.html">Support</a></nav></header>
   <h1>Privacy</h1>
   <p class="muted">Last updated November 11, 2026</p>
   <p>FoodTrip collects no data about you. There is no account, no analytics, no advertising and no tracking, on the website or in the iPhone app.</p>

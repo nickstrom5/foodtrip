@@ -9,6 +9,8 @@ Website + iPhone app that plan where to eat on a trip. Read `README.md` first.
 - Web planner checks: `node scripts/test-planner.mjs`. Site preview: `python3 -m http.server 4330 --directory docs`.
 - After a data or planner change: `python3 scripts/build-cities.py`, `node scripts/test-planner.mjs`,
   `node scripts/make-city-pages.mjs` (city pages, home-page city links, sitemap), `python3 scripts/qa-site.py` (must pass).
+- Design pass (every QA): with the site served on :4330, `node scripts/design-shots.mjs <dir>` captures every page
+  template at phone and desktop width, light and dark, and writes `tile--*.png` contact sheets to review by eye.
 
 ## The one rule
 `docs/planner.js` and `FoodTrip/Models/Planner.swift` are the same algorithm and must give the same plan (a shared link

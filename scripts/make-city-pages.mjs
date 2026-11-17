@@ -24,9 +24,9 @@ const STYLE = `<style>
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 56px; }
-  header.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding: 16px 0; }
-  .brand { font-weight: 800; font-size: 20px; letter-spacing: -.02em; color: var(--fg); text-decoration: none; }
-  nav a { margin-left: 16px; font-size: 15px; } nav a:first-child { margin-left: 0; }
+  header.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding: 16px 0 8px; }
+  .brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 20px; letter-spacing: -.02em; color: var(--fg); text-decoration: none; }
+  header.top nav { display: flex; gap: 16px; font-size: 15px; } header.top nav a { color: var(--fg); }
   a { color: var(--accent-ink); }
   a:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent); outline-offset: 2px; }
   .crumbs { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
@@ -42,8 +42,8 @@ const STYLE = `<style>
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
   ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
-  ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; }
-  ul.cities a { display: block; background: var(--surface); border-radius: 14px; padding: 12px 14px; text-decoration: none; font-weight: 650; }
+  ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
@@ -81,7 +81,7 @@ ${CSP}
 <link rel="manifest" href="/site.webmanifest">
 ${STYLE}`;
 }
-const TOP = `<header class="top"><a class="brand" href="/">FoodTrip</a><nav aria-label="Site"><a href="/">Plan a trip</a><a href="/cities/">Cities</a><a href="/support.html">Support</a></nav></header>`;
+const TOP = `<header class="top"><a class="brand" href="/" aria-label="FoodTrip home"><svg viewBox="0 0 64 64" aria-hidden="true" width="28" height="28"><rect width="64" height="64" rx="14" fill="#D9472B"/><path d="M32 12c-8.3 0-15 6.5-15 14.6C17 37.5 32 52 32 52s15-14.5 15-25.4C47 18.5 40.3 12 32 12z" fill="#fff"/><path d="M27 20v8a3 3 0 0 0 2 2.8V38h2V30.8A3 3 0 0 0 33 28v-8h-1.5v7h-1v-7h-1v7h-1v-7zM37.5 20c-1.7 0-3 2.2-3 5.5 0 2.2.9 3.6 2 4.1V38h2V20z" fill="#D9472B"/></svg>FoodTrip</a><nav aria-label="Site"><a href="/">Plan a trip</a><a href="/cities/">Cities</a><a href="/support.html">Support</a></nav></header>`;
 const FOOT = `<footer><p>Restaurant data from <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>: public records, MICHELIN Guide and James Beard Foundation honors. FoodTrip is not affiliated with the MICHELIN Guide, the James Beard Foundation or OpenTable.</p>
 <p><a href="/">FoodTrip</a> · <a href="/cities/">Cities</a> · <a href="/support.html">Support</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · © 2026 FoodTrip</p></footer>`;
 
@@ -133,7 +133,7 @@ for (const ci of index) {
 <p class="meta">${esc(p.cu)} · ${P.PRICE[p.p]} · about $${s.cost} a person${p.hd ? " · " + esc(p.hd) : ""}${p.a ? " · " + esc(p.a) : ""}</p>
 <span class="badge${/MICHELIN|Bib/.test(p.hl) ? " mich" : ""}">${esc(p.hl)}</span>${p.w ? `<p class="why">${esc(p.w)}</p>` : ""}</div>`;
     }).join("\n");
-    const missing = day.missing.length ? `<p class="note">FoodTrip has no ${day.missing.join(" or ")} pick left in ${esc(c.name)} for this day.</p>` : "";
+    const missing = day.missing.length ? `<p class="note">FoodTrip has no ${day.missing.map((m) => (m === "snack" ? "afternoon treat" : m)).join(" or ")} pick left in ${esc(c.name)} for this day.</p>` : "";
     return `<h2>Day ${day.index + 1}: about $${day.spent} a person</h2>\n${stops}${missing}`;
   }).join("\n");
   const rest = c.places.filter((p) => !inPlan.has(p.id)).slice(0, 40);
@@ -159,7 +159,7 @@ ${TOP}
 <p class="crumbs"><a href="/">FoodTrip</a> › <a href="/cities/">Cities</a> › ${esc(c.name)}</p>
 <h1>Where to eat in ${esc(label)}: a 3-day food itinerary</h1>
 <p class="lede">Three days of ${full ? "breakfast, lunch and dinner" : "lunch and dinner, with breakfast where FoodTrip has a pick,"} in ${esc(c.name)}, ${esc(c.st)}, at about $${SAMPLE.budget} a person a day. FoodTrip built it from its ${c.places.length} picks in the city${honorLine ? `, of which ${honorLine}` : ""}.</p>
-<p><a class="btn" href="${esc(planLink)}">Plan ${esc(c.name)} for your dates and budget</a></p>
+<p><a class="btn" href="${esc(planLink)}">Plan your ${esc(c.name)} trip</a></p>
 ${days}
 <p class="note">About $${plan.total} a person for the three days. Prices are estimates for food, tax and tip, without drinks. Times are suggestions: check each restaurant's hours and book ahead.</p>
 <h2>${rest.length ? `${rest.length} more places to eat in ${esc(c.name)}` : `More about ${esc(c.name)}`}</h2>
