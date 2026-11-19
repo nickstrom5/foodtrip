@@ -11,6 +11,8 @@ Website + iPhone app that plan where to eat on a trip. Read `README.md` first.
   `node scripts/make-city-pages.mjs` (city pages, home-page city links, sitemap), `python3 scripts/qa-site.py` (must pass).
 - Design pass (every QA): with the site served on :4330, `node scripts/design-shots.mjs <dir>` captures every page
   template at phone and desktop width, light and dark, and writes `tile--*.png` contact sheets to review by eye.
+- Plan quality: `node scripts/check-spread.mjs` plans four typical trips in every city and reports days whose stops
+  are over 20 km apart, days missing a meal and days over budget. Compare the counts before and after a planner change.
 
 ## The one rule
 `docs/planner.js` and `FoodTrip/Models/Planner.swift` are the same algorithm and must give the same plan (a shared link

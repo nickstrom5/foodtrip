@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Providence: 3-Day Food Itinerary","description":"A 3-day Providence food itinerary from 29 picks: 5 with a James Beard honor. Breakfast, lunch and dinner, planned around your budget. Free to use, no account.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/providence-ri.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Providence: 3-Day Food Itinerary","description":"A 3-day Providence food itinerary from 29 picks: 5 with a James Beard honor. Breakfast, lunch and dinner, planned around your budget. Free to use, no account.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/providence-ri.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Providence","item":"https://getfoodtrip.app/cities/providence-ri.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Providence","numberOfItems":9,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Newport Creamery","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"673 Smith St","addressLocality":"Providence","addressRegion":"RI","postalCode":"02908","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Olneyville New York System","servesCuisine":"Hot Dogs & Sausages","address":{"@type":"PostalAddress","streetAddress":"18 Plainfield St","addressLocality":"Providence","addressRegion":"RI","postalCode":"02909","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"Gift Horse","servesCuisine":"Seafood","address":{"@type":"PostalAddress","streetAddress":"272 Westminster St","addressLocality":"Providence","addressRegion":"RI","postalCode":"02903","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"Modern Diner","servesCuisine":"Breakfast & Diner","address":{"@type":"PostalAddress","streetAddress":"364 East Ave","addressLocality":"Providence","addressRegion":"RI","postalCode":"02860","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Tony's Colonial","servesCuisine":"Pizza","address":{"@type":"PostalAddress","streetAddress":"311 Atwells Ave","addressLocality":"Providence","addressRegion":"RI","postalCode":"02903","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"Loma","servesCuisine":"Bar & Pub","address":{"@type":"PostalAddress","streetAddress":"112 Spruce St","addressLocality":"Providence","addressRegion":"RI","postalCode":"02903","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Wright's Creamery","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"498 Kinsley Ave","addressLocality":"Providence","addressRegion":"RI","postalCode":"02909","addressCountry":"US"}}},{"@type":"ListItem","position":8,"item":{"@type":"Restaurant","name":"Al Forno Restaurant","servesCuisine":"Italian","address":{"@type":"PostalAddress","streetAddress":"577 S Water St","addressLocality":"Providence","addressRegion":"RI","postalCode":"02903","addressCountry":"US"}}},{"@type":"ListItem","position":9,"item":{"@type":"Restaurant","name":"Nicks On Broadway","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"500 Broadway","addressLocality":"Providence","addressRegion":"RI","postalCode":"02909","addressCountry":"US"}}}]}</script>
 </head>
@@ -105,26 +107,26 @@
 <h2>20 more places to eat in Providence</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>Costantino&#39;s Venda Bar &amp; Ristorante <span>· Italian · $$ · Eats Ranked pick</span></li>
-<li>Andino&#39;s Italian Restaurant <span>· Italian · $$ · Eats Ranked pick</span></li>
-<li>Cassarino&#39;s Restaurant <span>· Italian · $$ · Eats Ranked pick</span></li>
-<li>Angelo&#39;s Restaurant <span>· Italian · $$ · Eats Ranked pick</span></li>
-<li>Massimo Ristorante <span>· Italian · $$ · Eats Ranked pick</span></li>
-<li>Dune Brothers Seafood <span>· Seafood · $$$ · Eats Ranked pick</span></li>
-<li>Trattoria Appia <span>· Italian · $$ · Eats Ranked pick</span></li>
-<li>Wally&#39;s Providence <span>· Bar &amp; Pub · $$ · Eats Ranked pick</span></li>
-<li>Roma <span>· Italian · $$ · Eats Ranked pick</span></li>
-<li>Sam&#39;s New York System <span>· Hot Dogs &amp; Sausages · $ · Eats Ranked pick</span></li>
-<li>Iggy&#39;s Doughboys &amp; Chowder House <span>· Seafood · $$$ · Eats Ranked pick</span></li>
-<li>Apponaug Village Creamery <span>· Bakery &amp; Sweets · $ · Eats Ranked pick</span></li>
-<li>Olneyville New York System Cranston <span>· Hot Dogs &amp; Sausages · $ · Eats Ranked pick</span></li>
-<li>Wein-O-Rama <span>· Breakfast &amp; Diner · $ · Eats Ranked pick</span></li>
-<li>Matos Bakery <span>· Bakery &amp; Sweets · $ · Eats Ranked pick</span></li>
-<li>DePetrillo&#39;s Pizza &amp; Bakery Smithfield <span>· Pizza · $ · Eats Ranked pick</span></li>
-<li>The Keep <span>· Bakery &amp; Sweets · $ · Eats Ranked pick</span></li>
-<li>Cafe Alma <span>· European · $$ · Eats Ranked pick</span></li>
-<li>D. Palmieri&#39;s Bakery <span>· Bakery &amp; Sweets · $ · Eats Ranked pick</span></li>
-<li>Rod&#39;s Grille <span>· Breakfast &amp; Diner · $ · Eats Ranked pick</span></li>
+<li><strong>Costantino&#39;s Venda Bar &amp; Ristorante</strong><span>Italian · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Andino&#39;s Italian Restaurant</strong><span>Italian · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Cassarino&#39;s Restaurant</strong><span>Italian · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Angelo&#39;s Restaurant</strong><span>Italian · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Massimo Ristorante</strong><span>Italian · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Dune Brothers Seafood</strong><span>Seafood · $$$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Trattoria Appia</strong><span>Italian · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Wally&#39;s Providence</strong><span>Bar &amp; Pub · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Roma</strong><span>Italian · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Sam&#39;s New York System</strong><span>Hot Dogs &amp; Sausages · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Iggy&#39;s Doughboys &amp; Chowder House</strong><span>Seafood · $$$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Apponaug Village Creamery</strong><span>Bakery &amp; Sweets · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Olneyville New York System Cranston</strong><span>Hot Dogs &amp; Sausages · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Wein-O-Rama</strong><span>Breakfast &amp; Diner · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Matos Bakery</strong><span>Bakery &amp; Sweets · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>DePetrillo&#39;s Pizza &amp; Bakery Smithfield</strong><span>Pizza · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>The Keep</strong><span>Bakery &amp; Sweets · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Cafe Alma</strong><span>European · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>D. Palmieri&#39;s Bakery</strong><span>Bakery &amp; Sweets · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Rod&#39;s Grille</strong><span>Breakfast &amp; Diner · $ · <span class="nw">Eats Ranked pick</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

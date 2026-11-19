@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Oakland: 3-Day Food Itinerary","description":"A 3-day Oakland food itinerary from 43 picks: 20 with a MICHELIN Guide distinction, 6 with a James Beard honor. Planned around your budget. Swap any stop.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/oakland-ca.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Oakland: 3-Day Food Itinerary","description":"A 3-day Oakland food itinerary from 43 picks: 20 with a MICHELIN Guide distinction, 6 with a James Beard honor. Planned around your budget. Swap any stop.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/oakland-ca.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Oakland","item":"https://getfoodtrip.app/cities/oakland-ca.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Oakland","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Lion Dance Cafe","servesCuisine":"Coffee & Café","address":{"@type":"PostalAddress","streetAddress":"380 17th St","addressLocality":"Oakland","addressRegion":"CA","postalCode":"94612","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Tacos Oscar","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"420 40th St","addressLocality":"Oakland","addressRegion":"CA","postalCode":"94609","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"Joodooboo","servesCuisine":"Korean","address":{"@type":"PostalAddress","streetAddress":"4201 Market St","addressLocality":"Oakland","addressRegion":"CA","postalCode":"94608","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"Cafe Ohlone","servesCuisine":"Coffee & Café","address":{"@type":"PostalAddress","streetAddress":"2430 Bancroft Way","addressLocality":"Oakland","addressRegion":"CA","postalCode":"94704","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Bombera","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"3459 Champion St","addressLocality":"Oakland","addressRegion":"CA","postalCode":"94602","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"Jo's Modern Thai","servesCuisine":"Thai","address":{"@type":"PostalAddress","streetAddress":"3725 Macarthur Blvd","addressLocality":"Oakland","addressRegion":"CA","postalCode":"94619","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Horn Barbecue","servesCuisine":"BBQ","address":{"@type":"PostalAddress","streetAddress":"2534 Cypress St","addressLocality":"Oakland","addressRegion":"CA","postalCode":"94607","addressCountry":"US"}}},{"@type":"ListItem","position":8,"item":{"@type":"Restaurant","name":"Soba Ichi","servesCuisine":"Japanese & Sushi","address":{"@type":"PostalAddress","streetAddress":"2311 Magnolia St","addressLocality":"Oakland","addressRegion":"CA","postalCode":"94607","addressCountry":"US"}}}]}</script>
 </head>
@@ -102,41 +104,41 @@
 <h2>35 more places to eat in Oakland</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>Commis <span>· European · $$$$ · 2 MICHELIN Stars</span></li>
-<li>Sun Moon Studio <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Teni East Kitchen <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>FOB Kitchen <span>· Filipino · $$ · Bib Gourmand</span></li>
-<li>MAMA Oakland <span>· Italian · $$ · Bib Gourmand</span></li>
-<li>Snail Bar <span>· Bar &amp; Pub · $$ · Bib Gourmand</span></li>
-<li>Great China <span>· Chinese · $$ · Bib Gourmand</span></li>
-<li>Comal <span>· Mexican · $ · Bib Gourmand</span></li>
-<li>Ippuku <span>· Japanese &amp; Sushi · $$ · Bib Gourmand</span></li>
-<li>Spinning Bones <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>New Dumpling <span>· Chinese · $$ · Bib Gourmand</span></li>
-<li>Top Hatters Kitchen <span>· Vietnamese · $$ · Bib Gourmand</span></li>
-<li>Burdell <span>· Soul &amp; Southern · $$ · James Beard finalist</span></li>
-<li>Friends &amp; Family <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>Tarts de Feybesse <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>Fikscue Craft BBQ <span>· BBQ · $$ · James Beard semifinalist</span></li>
-<li>Pomet <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Chez Panisse <span>· European · $$$ · MICHELIN Recommended</span></li>
-<li>Heinold&#39;s First and Last Chance Saloon <span>· Bar &amp; Pub · $$ · Open since 1960 or earlier</span></li>
-<li>Taqueria San Jose <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Ohgane Korean BBQ <span>· Korean · $$ · Eats Ranked pick</span></li>
-<li>Cactus Taqueria <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Peony Seafood Restaurant <span>· Seafood · $$$ · Eats Ranked pick</span></li>
-<li>Rico Rico Taco <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>La Calaca Loca Taqueria <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>La Catrina Taqueria <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Taqueria La Venganza <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Taqueria Los Comales <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Tacos Sinaloa <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Taqueria El Zocalo <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Sol Taqueria <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Gordo Taqueria <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Calafia Taqueria <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Ohgane <span>· American &amp; Other · $$ · Eats Ranked pick</span></li>
-<li>Tacos El Chino <span>· Mexican · $ · Eats Ranked pick</span></li>
+<li><strong>Commis</strong><span>European · $$$$ · <span class="nw">2 MICHELIN Stars</span></span></li>
+<li><strong>Sun Moon Studio</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Teni East Kitchen</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>FOB Kitchen</strong><span>Filipino · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>MAMA Oakland</strong><span>Italian · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Snail Bar</strong><span>Bar &amp; Pub · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Great China</strong><span>Chinese · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Comal</strong><span>Mexican · $ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Ippuku</strong><span>Japanese &amp; Sushi · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Spinning Bones</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>New Dumpling</strong><span>Chinese · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Top Hatters Kitchen</strong><span>Vietnamese · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Burdell</strong><span>Soul &amp; Southern · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Friends &amp; Family</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Tarts de Feybesse</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Fikscue Craft BBQ</strong><span>BBQ · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Pomet</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Chez Panisse</strong><span>European · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Heinold&#39;s First and Last Chance Saloon</strong><span>Bar &amp; Pub · $$ · <span class="nw">Open since 1960 or earlier</span></span></li>
+<li><strong>Taqueria San Jose</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Ohgane Korean BBQ</strong><span>Korean · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Cactus Taqueria</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Peony Seafood Restaurant</strong><span>Seafood · $$$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Rico Rico Taco</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>La Calaca Loca Taqueria</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>La Catrina Taqueria</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Taqueria La Venganza</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Taqueria Los Comales</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Tacos Sinaloa</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Taqueria El Zocalo</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Sol Taqueria</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Gordo Taqueria</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Calafia Taqueria</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Ohgane</strong><span>American &amp; Other · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Tacos El Chino</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

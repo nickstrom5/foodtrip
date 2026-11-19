@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Nashville: 3-Day Food Itinerary","description":"A 3-day Nashville food itinerary from 36 picks: 23 with a MICHELIN Guide distinction, 2 with a James Beard honor. Planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/nashville-tn.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Nashville: 3-Day Food Itinerary","description":"A 3-day Nashville food itinerary from 36 picks: 23 with a MICHELIN Guide distinction, 2 with a James Beard honor. Planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/nashville-tn.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Nashville","item":"https://getfoodtrip.app/cities/nashville-tn.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Nashville","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Biscuit Love","servesCuisine":"Soul & Southern","address":{"@type":"PostalAddress","streetAddress":"2001 Belcourt Ave","addressLocality":"Nashville","addressRegion":"TN","postalCode":"37212","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Kisser","servesCuisine":"Japanese & Sushi","address":{"@type":"PostalAddress","streetAddress":"747 Douglas Ave","addressLocality":"Nashville","addressRegion":"TN","postalCode":"37207","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"Peninsula","servesCuisine":"German & European","address":{"@type":"PostalAddress","streetAddress":"1035 W Eastland Ave","addressLocality":"Nashville","addressRegion":"TN","postalCode":"37206","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"The Loveless Cafe","servesCuisine":"Soul & Southern","address":{"@type":"PostalAddress","streetAddress":"8400 Tn-100","addressLocality":"Nashville","addressRegion":"TN","postalCode":"37221","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"City House","servesCuisine":"Italian","address":{"@type":"PostalAddress","streetAddress":"1222 4th Ave N","addressLocality":"Nashville","addressRegion":"TN","postalCode":"37208","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"Maiz de la Vida","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"606 8th Ave S","addressLocality":"Nashville","addressRegion":"TN","postalCode":"37203","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Uzbegim","servesCuisine":"Mediterranean & Middle Eastern","address":{"@type":"PostalAddress","streetAddress":"117 28th Ave N","addressLocality":"Nashville","addressRegion":"TN","postalCode":"37203","addressCountry":"US"}}},{"@type":"ListItem","position":8,"item":{"@type":"Restaurant","name":"Prince's Hot Chicken Shack","servesCuisine":"Chicken & Wings","address":{"@type":"PostalAddress","streetAddress":"5814 Nolensville Pk #110","addressLocality":"Nashville","addressRegion":"TN","postalCode":"37211","addressCountry":"US"}}}]}</script>
 </head>
@@ -102,34 +104,34 @@
 <h2>28 more places to eat in Nashville</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>Locust <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Bastion <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>The Catbird Seat <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Arnold&#39;s Country Kitchen <span>· Soul &amp; Southern · $$$ · MICHELIN Recommended</span></li>
-<li>Redheaded Stranger <span>· Mexican · $ · Bib Gourmand</span></li>
-<li>St. Vito Focacceria <span>· Italian · $$ · Bib Gourmand</span></li>
-<li>Sho Pizza Bar <span>· Pizza · $ · Bib Gourmand</span></li>
-<li>S.S. Gai <span>· Thai · $$ · Bib Gourmand</span></li>
-<li>Rolf and Daughters <span>· Mediterranean &amp; Middle Eastern · $$$ · MICHELIN Recommended</span></li>
-<li>Tailor <span>· South Asian · $$$ · MICHELIN Recommended</span></li>
-<li>Cafe Roze <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Folk <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>5th &amp; Taylor <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Hattie B&#39;s Hot Chicken <span>· Soul &amp; Southern · $$$ · MICHELIN Recommended</span></li>
-<li>Junior <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>International Market <span>· Thai · $$$ · MICHELIN Recommended</span></li>
-<li>iggy&#39;s <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Present Tense <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Shotgun Willie&#39;s BBQ <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>Swett&#39;s <span>· Soul &amp; Southern · $$ · Open since 1960 or earlier</span></li>
-<li>Party Fowl <span>· Chicken &amp; Wings · $ · Eats Ranked pick</span></li>
-<li>Helen&#39;s Hot Chicken <span>· Chicken &amp; Wings · $ · Eats Ranked pick</span></li>
-<li>400 Degrees <span>· Chicken &amp; Wings · $ · Eats Ranked pick</span></li>
-<li>Red&#39;s Hot Chicken <span>· Chicken &amp; Wings · $ · Eats Ranked pick</span></li>
-<li>Bolton&#39;s Spicy Chicken &amp; Fish <span>· Seafood · $$$ · Eats Ranked pick</span></li>
-<li>Prince&#39;s Hot Chicken <span>· Chicken &amp; Wings · $ · Eats Ranked pick</span></li>
-<li>Pepperfire Hot Chicken <span>· Chicken &amp; Wings · $ · Eats Ranked pick</span></li>
-<li>Lilly&#39;s Hot Chicken <span>· Chicken &amp; Wings · $ · Eats Ranked pick</span></li>
+<li><strong>Locust</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Bastion</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>The Catbird Seat</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Arnold&#39;s Country Kitchen</strong><span>Soul &amp; Southern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Redheaded Stranger</strong><span>Mexican · $ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>St. Vito Focacceria</strong><span>Italian · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Sho Pizza Bar</strong><span>Pizza · $ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>S.S. Gai</strong><span>Thai · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Rolf and Daughters</strong><span>Mediterranean &amp; Middle Eastern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Tailor</strong><span>South Asian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Cafe Roze</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Folk</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>5th &amp; Taylor</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Hattie B&#39;s Hot Chicken</strong><span>Soul &amp; Southern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Junior</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>International Market</strong><span>Thai · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>iggy&#39;s</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Present Tense</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Shotgun Willie&#39;s BBQ</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Swett&#39;s</strong><span>Soul &amp; Southern · $$ · <span class="nw">Open since 1960 or earlier</span></span></li>
+<li><strong>Party Fowl</strong><span>Chicken &amp; Wings · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Helen&#39;s Hot Chicken</strong><span>Chicken &amp; Wings · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>400 Degrees</strong><span>Chicken &amp; Wings · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Red&#39;s Hot Chicken</strong><span>Chicken &amp; Wings · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Bolton&#39;s Spicy Chicken &amp; Fish</strong><span>Seafood · $$$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Prince&#39;s Hot Chicken</strong><span>Chicken &amp; Wings · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Pepperfire Hot Chicken</strong><span>Chicken &amp; Wings · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Lilly&#39;s Hot Chicken</strong><span>Chicken &amp; Wings · $ · <span class="nw">Eats Ranked pick</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

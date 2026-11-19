@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Seattle: 3-Day Food Itinerary","description":"A 3-day Seattle food itinerary from 101 picks: 53 with a James Beard honor. Breakfast, lunch and dinner, planned around your budget. Free to use, no account.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/seattle-wa.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Seattle: 3-Day Food Itinerary","description":"A 3-day Seattle food itinerary from 101 picks: 53 with a James Beard honor. Breakfast, lunch and dinner, planned around your budget. Free to use, no account.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/seattle-wa.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Seattle","item":"https://getfoodtrip.app/cities/seattle-wa.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Seattle","numberOfItems":9,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Sea Wolf Bakers","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"3617 Stone Way","addressLocality":"Seattle","addressRegion":"WA","postalCode":"98103","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Delancey","servesCuisine":"Pizza","address":{"@type":"PostalAddress","streetAddress":"1415 NW 70th St","addressLocality":"Seattle","addressRegion":"WA","postalCode":"98117","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"Canlis","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"2576 Aurora Ave N","addressLocality":"Seattle","addressRegion":"WA","postalCode":"98109","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"Cafe Suliman","servesCuisine":"Coffee & Café","address":{"@type":"PostalAddress","streetAddress":"1531 Melrose Ave, C2","addressLocality":"Seattle","addressRegion":"WA","postalCode":"98122","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Pho Bac Súp Shop","servesCuisine":"Vietnamese","address":{"@type":"PostalAddress","streetAddress":"1240 S Jackson St","addressLocality":"Seattle","addressRegion":"WA","postalCode":"98144","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"Musang","servesCuisine":"Filipino","address":{"@type":"PostalAddress","streetAddress":"2524 Beacon Ave S","addressLocality":"Seattle","addressRegion":"WA","postalCode":"98144","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Ben's Bread","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"216 N 70th St","addressLocality":"Seattle","addressRegion":"WA","postalCode":"98103","addressCountry":"US"}}},{"@type":"ListItem","position":8,"item":{"@type":"Restaurant","name":"Joule","servesCuisine":"Korean","address":{"@type":"PostalAddress","streetAddress":"3506 Stone Way N","addressLocality":"Seattle","addressRegion":"WA","postalCode":"98103","addressCountry":"US"}}},{"@type":"ListItem","position":9,"item":{"@type":"Restaurant","name":"The Walrus and the Carpenter","servesCuisine":"Bar & Pub","address":{"@type":"PostalAddress","streetAddress":"4743 Ballard Ave NW","addressLocality":"Seattle","addressRegion":"WA","postalCode":"98107","addressCountry":"US"}}}]}</script>
 </head>
@@ -105,46 +107,46 @@
 <h2>40 more places to eat in Seattle</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>Oriental Mart Filipino Restaurant <span>· Filipino · $$ · James Beard America&#39;s Classic</span></li>
-<li>Rupee Bar <span>· Bar &amp; Pub · $$ · James Beard finalist</span></li>
-<li>Surrell <span>· American &amp; Other · $$ · James Beard finalist</span></li>
-<li>Willmott&#39;s Ghost <span>· Italian · $$ · James Beard finalist</span></li>
-<li>Kamonegi <span>· Japanese &amp; Sushi · $$ · James Beard finalist</span></li>
-<li>Atoma <span>· American &amp; Other · $$ · James Beard finalist</span></li>
-<li>Communion Seattle <span>· Bar &amp; Pub · $$ · James Beard finalist</span></li>
-<li>Rob Roy <span>· Bar &amp; Pub · $$ · James Beard finalist</span></li>
-<li>The Boat <span>· Vietnamese · $$ · James Beard finalist</span></li>
-<li>Pancita <span>· American &amp; Other · $$ · James Beard finalist</span></li>
-<li>Sushi Kashiba <span>· Japanese &amp; Sushi · $$ · James Beard semifinalist</span></li>
-<li>RockCreek Seafood &amp; Spirits <span>· Seafood · $$$ · James Beard semifinalist</span></li>
-<li>Homer Restaurant <span>· Mediterranean &amp; Middle Eastern · $$ · James Beard semifinalist</span></li>
-<li>Altura <span>· Italian · $$ · James Beard semifinalist</span></li>
-<li>Saint Bread <span>· Bakery &amp; Sweets · $ · James Beard semifinalist</span></li>
-<li>Bar del Corso <span>· Italian · $$ · James Beard semifinalist</span></li>
-<li>Familyfriend <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>The Flour Box <span>· Bakery &amp; Sweets · $ · James Beard semifinalist</span></li>
-<li>Hood Famous Bakeshop <span>· Bakery &amp; Sweets · $ · James Beard semifinalist</span></li>
-<li>Temple Pastries <span>· Bakery &amp; Sweets · $ · James Beard semifinalist</span></li>
-<li>Il Nido <span>· Italian · $$ · James Beard semifinalist</span></li>
-<li>Off Alley <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>Cloudburst Brewing <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>Roquette <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>Le Caviste <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>Wataru <span>· Japanese &amp; Sushi · $$ · James Beard semifinalist</span></li>
-<li>Wild Ginger Downtown <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>Spinasse <span>· Italian · $$ · James Beard semifinalist</span></li>
-<li>Canon <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>Lil Red Takeout &amp; Catering <span>· Latin &amp; Caribbean · $$ · James Beard semifinalist</span></li>
-<li>Columbia City Bakery <span>· Bakery &amp; Sweets · $ · James Beard semifinalist</span></li>
-<li>L&#39;Oursin <span>· German &amp; European · $$ · James Beard semifinalist</span></li>
-<li>Lark Restaurant <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>Sushi Kappo Tamura <span>· Japanese &amp; Sushi · $$ · James Beard semifinalist</span></li>
-<li>Tomo <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>The Wayland Mill <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>Girin SteakHouse <span>· Korean · $$ · James Beard semifinalist</span></li>
-<li>Ramie <span>· Vietnamese · $$ · James Beard semifinalist</span></li>
-<li>Ltd Edition Sushi <span>· Japanese &amp; Sushi · $$ · James Beard semifinalist</span></li>
-<li>The Little Beast <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
+<li><strong>Oriental Mart Filipino Restaurant</strong><span>Filipino · $$ · <span class="nw">James Beard America&#39;s Classic</span></span></li>
+<li><strong>Rupee Bar</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Surrell</strong><span>American &amp; Other · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Willmott&#39;s Ghost</strong><span>Italian · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Kamonegi</strong><span>Japanese &amp; Sushi · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Atoma</strong><span>American &amp; Other · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Communion Seattle</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Rob Roy</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>The Boat</strong><span>Vietnamese · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Pancita</strong><span>American &amp; Other · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Sushi Kashiba</strong><span>Japanese &amp; Sushi · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>RockCreek Seafood &amp; Spirits</strong><span>Seafood · $$$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Homer Restaurant</strong><span>Mediterranean &amp; Middle Eastern · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Altura</strong><span>Italian · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Saint Bread</strong><span>Bakery &amp; Sweets · $ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Bar del Corso</strong><span>Italian · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Familyfriend</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>The Flour Box</strong><span>Bakery &amp; Sweets · $ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Hood Famous Bakeshop</strong><span>Bakery &amp; Sweets · $ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Temple Pastries</strong><span>Bakery &amp; Sweets · $ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Il Nido</strong><span>Italian · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Off Alley</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Cloudburst Brewing</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Roquette</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Le Caviste</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Wataru</strong><span>Japanese &amp; Sushi · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Wild Ginger Downtown</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Spinasse</strong><span>Italian · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Canon</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Lil Red Takeout &amp; Catering</strong><span>Latin &amp; Caribbean · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Columbia City Bakery</strong><span>Bakery &amp; Sweets · $ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>L&#39;Oursin</strong><span>German &amp; European · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Lark Restaurant</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Sushi Kappo Tamura</strong><span>Japanese &amp; Sushi · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Tomo</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>The Wayland Mill</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Girin SteakHouse</strong><span>Korean · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Ramie</strong><span>Vietnamese · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Ltd Edition Sushi</strong><span>Japanese &amp; Sushi · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>The Little Beast</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

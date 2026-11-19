@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Austin: 3-Day Food Itinerary","description":"A 3-day Austin food itinerary from 62 picks: 45 with a MICHELIN Guide distinction, 1 with a James Beard honor. Three meals a day, planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/austin-tx.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Austin: 3-Day Food Itinerary","description":"A 3-day Austin food itinerary from 62 picks: 45 with a MICHELIN Guide distinction, 1 with a James Beard honor. Three meals a day, planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/austin-tx.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Austin","item":"https://getfoodtrip.app/cities/austin-tx.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Austin","numberOfItems":9,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Austin Kolache & Koffee","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"7113 Burnet Rd","addressLocality":"Austin","addressRegion":"TX","postalCode":"78757","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Ema","servesCuisine":"Mediterranean & Middle Eastern","address":{"@type":"PostalAddress","streetAddress":"3120 Palm Way #170","addressLocality":"Austin","addressRegion":"TX","postalCode":"78758","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"InterStellar BBQ","servesCuisine":"BBQ","address":{"@type":"PostalAddress","streetAddress":"12233 Ranch Rd 620 N","addressLocality":"Austin","addressRegion":"TX","postalCode":"78750","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"Joe's Bakery & Coffee Shop","servesCuisine":"Coffee & Café","address":{"@type":"PostalAddress","streetAddress":"2305 E 7th St","addressLocality":"Austin","addressRegion":"TX","postalCode":"78702","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Cuantos Tacos","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"1108 E 12th St","addressLocality":"Austin","addressRegion":"TX","postalCode":"78702","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"Birdie's","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"2944 E 12th St","addressLocality":"Austin","addressRegion":"TX","postalCode":"78702","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Mercado Sin Nombre","servesCuisine":"Coffee & Café","address":{"@type":"PostalAddress","streetAddress":"408 N Pleasant Valley Rd","addressLocality":"Austin","addressRegion":"TX","postalCode":"78702","addressCountry":"US"}}},{"@type":"ListItem","position":8,"item":{"@type":"Restaurant","name":"Nixta Taqueria","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"2512 E 12th St","addressLocality":"Austin","addressRegion":"TX","postalCode":"78702","addressCountry":"US"}}},{"@type":"ListItem","position":9,"item":{"@type":"Restaurant","name":"Kemuri Tatsu-ya","servesCuisine":"Japanese & Sushi","address":{"@type":"PostalAddress","streetAddress":"2713 E 2nd St","addressLocality":"Austin","addressRegion":"TX","postalCode":"78702","addressCountry":"US"}}}]}</script>
 </head>
@@ -105,46 +107,46 @@
 <h2>40 more places to eat in Austin</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>LeRoy and Lewis Barbecue <span>· BBQ · $$ · 1 MICHELIN Star</span></li>
-<li>Hestia <span>· Steakhouse · $$$$ · 1 MICHELIN Star</span></li>
-<li>Barley Swine <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Craft Omakase <span>· Japanese &amp; Sushi · $$$$ · 1 MICHELIN Star</span></li>
-<li>Fabrik <span>· Healthy &amp; Vegan · $$$$ · 1 MICHELIN Star</span></li>
-<li>Kappo Kappo <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Emmer &amp; Rye <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Odd Duck <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Franklin Barbecue <span>· BBQ · $$ · Bib Gourmand</span></li>
-<li>Veracruz Fonda &amp; Bar <span>· Mexican · $ · Bib Gourmand</span></li>
-<li>Micklethwait Craft Meats <span>· BBQ · $$ · Bib Gourmand</span></li>
-<li>La Santa Barbacha <span>· Mexican · $ · Bib Gourmand</span></li>
-<li>KG BBQ <span>· BBQ · $$ · Bib Gourmand</span></li>
-<li>Distant Relatives <span>· BBQ · $$ · Bib Gourmand</span></li>
-<li>Dai Due <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Este <span>· Seafood · $$$ · MICHELIN Recommended</span></li>
-<li>Ezov <span>· Mediterranean &amp; Middle Eastern · $$$ · MICHELIN Recommended</span></li>
-<li>Comedor <span>· Mexican · $ · MICHELIN Recommended</span></li>
-<li>Suerte <span>· Mexican · $ · MICHELIN Recommended</span></li>
-<li>Siti <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Jeffrey&#39;s <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Terry Black&#39;s BBQ <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>Lenoir <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Mexta <span>· Mexican · $ · MICHELIN Recommended</span></li>
-<li>Toshokan <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Apt 115 <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Din Ho Chinese BBQ <span>· Chinese · $$$ · MICHELIN Recommended</span></li>
-<li>Ling Kitchen <span>· Chinese · $$$ · MICHELIN Recommended</span></li>
-<li>Mum Foods Smokehouse &amp; Delicatessen <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>Tare <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Launderette <span>· Coffee &amp; Café · $ · MICHELIN Recommended</span></li>
-<li>la Barbecue <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>La Condesa <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Le Calamar <span>· German &amp; European · $$$ · MICHELIN Recommended</span></li>
-<li>Lutie&#39;s <span>· German &amp; European · $$$ · MICHELIN Recommended</span></li>
-<li>Discada <span>· Mexican · $ · MICHELIN Recommended</span></li>
-<li>Briscuits <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Parish Barbecue <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>Dirty Martin&#39;s Place <span>· Burgers · $ · Open since 1960 or earlier</span></li>
-<li>Scholz Garten <span>· American &amp; Other · $$ · Open since 1960 or earlier</span></li>
+<li><strong>LeRoy and Lewis Barbecue</strong><span>BBQ · $$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Hestia</strong><span>Steakhouse · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Barley Swine</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Craft Omakase</strong><span>Japanese &amp; Sushi · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Fabrik</strong><span>Healthy &amp; Vegan · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Kappo Kappo</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Emmer &amp; Rye</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Odd Duck</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Franklin Barbecue</strong><span>BBQ · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Veracruz Fonda &amp; Bar</strong><span>Mexican · $ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Micklethwait Craft Meats</strong><span>BBQ · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>La Santa Barbacha</strong><span>Mexican · $ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>KG BBQ</strong><span>BBQ · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Distant Relatives</strong><span>BBQ · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Dai Due</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Este</strong><span>Seafood · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Ezov</strong><span>Mediterranean &amp; Middle Eastern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Comedor</strong><span>Mexican · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Suerte</strong><span>Mexican · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Siti</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Jeffrey&#39;s</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Terry Black&#39;s BBQ</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Lenoir</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Mexta</strong><span>Mexican · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Toshokan</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Apt 115</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Din Ho Chinese BBQ</strong><span>Chinese · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Ling Kitchen</strong><span>Chinese · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Mum Foods Smokehouse &amp; Delicatessen</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Tare</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Launderette</strong><span>Coffee &amp; Café · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>la Barbecue</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>La Condesa</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Le Calamar</strong><span>German &amp; European · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Lutie&#39;s</strong><span>German &amp; European · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Discada</strong><span>Mexican · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Briscuits</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Parish Barbecue</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Dirty Martin&#39;s Place</strong><span>Burgers · $ · <span class="nw">Open since 1960 or earlier</span></span></li>
+<li><strong>Scholz Garten</strong><span>American &amp; Other · $$ · <span class="nw">Open since 1960 or earlier</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

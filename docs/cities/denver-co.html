@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Denver: 3-Day Food Itinerary","description":"A 3-day Denver food itinerary from 86 picks: 39 with a MICHELIN Guide distinction, 14 with a James Beard honor. Three meals a day, planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/denver-co.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Denver: 3-Day Food Itinerary","description":"A 3-day Denver food itinerary from 86 picks: 39 with a MICHELIN Guide distinction, 14 with a James Beard honor. Three meals a day, planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/denver-co.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Denver","item":"https://getfoodtrip.app/cities/denver-co.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Denver","numberOfItems":9,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Odell's Bagel","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"3200 Irving St","addressLocality":"Denver","addressRegion":"CO","postalCode":"80211","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Rougarou","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"2844 Welton St","addressLocality":"Denver","addressRegion":"CO","postalCode":"80205","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"El Taco de Mexico","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"714 Santa Fe Dr","addressLocality":"Denver","addressRegion":"CO","postalCode":"80204","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"Onefold","servesCuisine":"Breakfast & Diner","address":{"@type":"PostalAddress","streetAddress":"1420 E 18th Ave","addressLocality":"Denver","addressRegion":"CO","postalCode":"80218","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Mister Oso","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"3163 Larimer St","addressLocality":"Denver","addressRegion":"CO","postalCode":"80205","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"Yuan Wonton","servesCuisine":"Chinese","address":{"@type":"PostalAddress","streetAddress":"2878 Fairfax St","addressLocality":"Denver","addressRegion":"CO","postalCode":"80207","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Reunion Bread Co","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"1240 S Pearl St","addressLocality":"Denver","addressRegion":"CO","postalCode":"80210","addressCountry":"US"}}},{"@type":"ListItem","position":8,"item":{"@type":"Restaurant","name":"Cherry Cricket","servesCuisine":"Burgers","address":{"@type":"PostalAddress","streetAddress":"2641 E 2nd Ave","addressLocality":"Denver","addressRegion":"CO","postalCode":"80206","addressCountry":"US"}}},{"@type":"ListItem","position":9,"item":{"@type":"Restaurant","name":"Restaurant Olivia","servesCuisine":"Italian","address":{"@type":"PostalAddress","streetAddress":"290 S Downing St","addressLocality":"Denver","addressRegion":"CO","postalCode":"80209","addressCountry":"US"}}}]}</script>
 </head>
@@ -105,46 +107,46 @@
 <h2>40 more places to eat in Denver</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>The Wolf&#39;s Tailor <span>· American &amp; Other · $$$$ · 2 MICHELIN Stars</span></li>
-<li>Beckon <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Brutø <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Margot <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Mezcaleria Alma <span>· Mexican · $$$$ · 1 MICHELIN Star</span></li>
-<li>Alma Fonda Fina <span>· Mexican · $$$$ · 1 MICHELIN Star</span></li>
-<li>Kizaki <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Milpero <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Hop Alley <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>The Ginger Pig <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>MAKfam <span>· Chinese · $$ · Bib Gourmand</span></li>
-<li>Glo Noodle House <span>· Japanese &amp; Sushi · $$ · Bib Gourmand</span></li>
-<li>Ash&#39;Kara <span>· Mediterranean &amp; Middle Eastern · $$ · Bib Gourmand</span></li>
-<li>La Diabla Pozole y Mezcal <span>· Mexican · $ · Bib Gourmand</span></li>
-<li>Tavernetta <span>· Italian · $$ · Bib Gourmand</span></li>
-<li>Pig and Tiger <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Annette <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Barolo Grill <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Yacht Club <span>· Bar &amp; Pub · $$ · James Beard finalist</span></li>
-<li>Coperta <span>· Italian · $$ · James Beard semifinalist</span></li>
-<li>Lucina Eatery &amp; Bar <span>· Latin &amp; Caribbean · $$ · James Beard semifinalist</span></li>
-<li>Spuntino <span>· Italian · $$ · James Beard semifinalist</span></li>
-<li>Le French <span>· German &amp; European · $$ · James Beard semifinalist</span></li>
-<li>Sắp Sửa <span>· Vietnamese · $$ · James Beard semifinalist</span></li>
-<li>Lady Jane <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>Molotov Kitschen + Cocktails <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>Traveling Mercies <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>Gladys <span>· Healthy &amp; Vegan · $$ · James Beard semifinalist</span></li>
-<li>Smok <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>A5 Steakhouse <span>· Steakhouse · $$$ · MICHELIN Recommended</span></li>
-<li>Wildflower <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Temaki Den <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Safta <span>· Mediterranean &amp; Middle Eastern · $$$ · MICHELIN Recommended</span></li>
-<li>Dio Mio <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Brasserie Brixton <span>· German &amp; European · $$$ · MICHELIN Recommended</span></li>
-<li>Marco&#39;s Coal-Fired <span>· Pizza · $ · MICHELIN Recommended</span></li>
-<li>Mercantile <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Kawa Ni <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Hey Kiddo <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Ukiyo <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
+<li><strong>The Wolf&#39;s Tailor</strong><span>American &amp; Other · $$$$ · <span class="nw">2 MICHELIN Stars</span></span></li>
+<li><strong>Beckon</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Brutø</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Margot</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Mezcaleria Alma</strong><span>Mexican · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Alma Fonda Fina</strong><span>Mexican · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Kizaki</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Milpero</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Hop Alley</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>The Ginger Pig</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>MAKfam</strong><span>Chinese · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Glo Noodle House</strong><span>Japanese &amp; Sushi · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Ash&#39;Kara</strong><span>Mediterranean &amp; Middle Eastern · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>La Diabla Pozole y Mezcal</strong><span>Mexican · $ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Tavernetta</strong><span>Italian · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Pig and Tiger</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Annette</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Barolo Grill</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Yacht Club</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Coperta</strong><span>Italian · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Lucina Eatery &amp; Bar</strong><span>Latin &amp; Caribbean · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Spuntino</strong><span>Italian · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Le French</strong><span>German &amp; European · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Sắp Sửa</strong><span>Vietnamese · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Lady Jane</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Molotov Kitschen + Cocktails</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Traveling Mercies</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Gladys</strong><span>Healthy &amp; Vegan · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Smok</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>A5 Steakhouse</strong><span>Steakhouse · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Wildflower</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Temaki Den</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Safta</strong><span>Mediterranean &amp; Middle Eastern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Dio Mio</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Brasserie Brixton</strong><span>German &amp; European · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Marco&#39;s Coal-Fired</strong><span>Pizza · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Mercantile</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Kawa Ni</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Hey Kiddo</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Ukiyo</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

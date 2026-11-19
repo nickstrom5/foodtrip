@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in San Antonio: 3-Day Food Itinerary","description":"A 3-day San Antonio food itinerary from 28 picks: 16 with a MICHELIN Guide distinction. Lunch and dinner every day, planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/san-antonio-tx.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in San Antonio: 3-Day Food Itinerary","description":"A 3-day San Antonio food itinerary from 28 picks: 16 with a MICHELIN Guide distinction. Lunch and dinner every day, planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/san-antonio-tx.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"San Antonio","item":"https://getfoodtrip.app/cities/san-antonio-tx.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for San Antonio","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Mi Tierra Café y Panadería","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"218 Produce Row","addressLocality":"San Antonio","addressRegion":"TX","postalCode":"78207","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Mezquite","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"221 Newell Ave","addressLocality":"San Antonio","addressRegion":"TX","postalCode":"78215","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"Southerleigh Fine Food & Brewery","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"136 E Grayson St","addressLocality":"San Antonio","addressRegion":"TX","postalCode":"78215","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"El Milagrito Cafe","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"521 E Woodlawn Ave","addressLocality":"San Antonio","addressRegion":"TX","postalCode":"78212","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Cullum's Attaboy","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"111 Kings Ct","addressLocality":"San Antonio","addressRegion":"TX","postalCode":"78212","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"The Jerk Shack","servesCuisine":"Latin & Caribbean","address":{"@type":"PostalAddress","streetAddress":"10234 Tx-151 Ste 103","addressLocality":"San Antonio","addressRegion":"TX","postalCode":"78251","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Lovers Pizzeria","servesCuisine":"Pizza","address":{"@type":"PostalAddress","streetAddress":"105 E Ashby Pl","addressLocality":"San Antonio","addressRegion":"TX","postalCode":"78212","addressCountry":"US"}}},{"@type":"ListItem","position":8,"item":{"@type":"Restaurant","name":"Little Em's Oyster Bar","servesCuisine":"Seafood","address":{"@type":"PostalAddress","streetAddress":"1001 S Alamo St","addressLocality":"San Antonio","addressRegion":"TX","postalCode":"78210","addressCountry":"US"}}}]}</script>
 </head>
@@ -102,26 +104,26 @@
 <h2>20 more places to eat in San Antonio</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>Mixtli <span>· Mexican · $$$$ · 1 MICHELIN Star</span></li>
-<li>Isidore <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Nicōsi <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Ladino <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Leche de Tigre <span>· Latin &amp; Caribbean · $$$ · MICHELIN Recommended</span></li>
-<li>Reese Bros Barbecue <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>2M Smokehouse <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>Signature Restaurant <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Garcia&#39;s Mexican Food <span>· Mexican · $ · MICHELIN Recommended</span></li>
-<li>Petit Coquin <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Bud Jones Restaurant <span>· Seafood · $$$ · Open since 1960 or earlier</span></li>
-<li>Schilo&#39;s Delicatessen <span>· German &amp; European · $$ · Open since 1960 or earlier</span></li>
-<li>Mexican Manhattan <span>· Mexican · $ · Open since 1960 or earlier</span></li>
-<li>Jacala Mexican Restaurant <span>· Mexican · $ · Open since 1960 or earlier</span></li>
-<li>Teka Molino <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Don Pedro Mexican Restaurant <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Ray&#39;s Drive Inn <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>El Pastor es mi Señor <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Josephine Street <span>· Steakhouse · $$$ · Eats Ranked pick</span></li>
-<li>La Fonda on Main <span>· Mexican · $ · Eats Ranked pick</span></li>
+<li><strong>Mixtli</strong><span>Mexican · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Isidore</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Nicōsi</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Ladino</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Leche de Tigre</strong><span>Latin &amp; Caribbean · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Reese Bros Barbecue</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>2M Smokehouse</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Signature Restaurant</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Garcia&#39;s Mexican Food</strong><span>Mexican · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Petit Coquin</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Bud Jones Restaurant</strong><span>Seafood · $$$ · <span class="nw">Open since 1960 or earlier</span></span></li>
+<li><strong>Schilo&#39;s Delicatessen</strong><span>German &amp; European · $$ · <span class="nw">Open since 1960 or earlier</span></span></li>
+<li><strong>Mexican Manhattan</strong><span>Mexican · $ · <span class="nw">Open since 1960 or earlier</span></span></li>
+<li><strong>Jacala Mexican Restaurant</strong><span>Mexican · $ · <span class="nw">Open since 1960 or earlier</span></span></li>
+<li><strong>Teka Molino</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Don Pedro Mexican Restaurant</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Ray&#39;s Drive Inn</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>El Pastor es mi Señor</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Josephine Street</strong><span>Steakhouse · $$$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>La Fonda on Main</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

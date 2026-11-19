@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Miami: 3-Day Food Itinerary","description":"A 3-day Miami food itinerary from 100 picks: 61 with a MICHELIN Guide distinction, 6 with a James Beard honor. Three meals a day, planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/miami-fl.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Miami: 3-Day Food Itinerary","description":"A 3-day Miami food itinerary from 100 picks: 61 with a MICHELIN Guide distinction, 6 with a James Beard honor. Three meals a day, planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/miami-fl.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Miami","item":"https://getfoodtrip.app/cities/miami-fl.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Miami","numberOfItems":9,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Zak The Baker","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"295 NW 26th St","addressLocality":"Miami","addressRegion":"FL","postalCode":"33127","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Lucali","servesCuisine":"Pizza","address":{"@type":"PostalAddress","streetAddress":"1930 Bay Rd","addressLocality":"Miami","addressRegion":"FL","postalCode":"33139","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"Joe's Stone Crab","servesCuisine":"Seafood","address":{"@type":"PostalAddress","streetAddress":"11 Washington Ave","addressLocality":"Miami","addressRegion":"FL","postalCode":"33139","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"Tinta y Cafe","servesCuisine":"Coffee & Café","address":{"@type":"PostalAddress","streetAddress":"1315 Ponce De Leon Blvd","addressLocality":"Miami","addressRegion":"FL","postalCode":"33134","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Versailles","servesCuisine":"Latin & Caribbean","address":{"@type":"PostalAddress","streetAddress":"3555 SW 8th St","addressLocality":"Miami","addressRegion":"FL","postalCode":"33135","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"To Be Determined","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"2240 SW 32 Ave","addressLocality":"Miami","addressRegion":"FL","postalCode":"33145","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Chug's Diner","servesCuisine":"Latin & Caribbean","address":{"@type":"PostalAddress","streetAddress":"3444 Main Hwy","addressLocality":"Miami","addressRegion":"FL","postalCode":"33133","addressCountry":"US"}}},{"@type":"ListItem","position":8,"item":{"@type":"Restaurant","name":"El Turco","servesCuisine":"Mediterranean & Middle Eastern","address":{"@type":"PostalAddress","streetAddress":"5026 NE 2nd Ave","addressLocality":"Miami","addressRegion":"FL","postalCode":"33137","addressCountry":"US"}}},{"@type":"ListItem","position":9,"item":{"@type":"Restaurant","name":"Tam Tam","servesCuisine":"Vietnamese","address":{"@type":"PostalAddress","streetAddress":"99 NW 1st St","addressLocality":"Miami","addressRegion":"FL","postalCode":"33128","addressCountry":"US"}}}]}</script>
 </head>
@@ -105,46 +107,46 @@
 <h2>40 more places to eat in Miami</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>L&#39;Atelier de Joël Robuchon Miami <span>· American &amp; Other · $$$$ · 2 MICHELIN Stars</span></li>
-<li>Le Jardinier Miami <span>· European · $$$$ · 1 MICHELIN Star</span></li>
-<li>Los Félix <span>· Mexican · $$$$ · 1 MICHELIN Star</span></li>
-<li>Hiden <span>· Japanese &amp; Sushi · $$$$ · 1 MICHELIN Star</span></li>
-<li>Cote Miami <span>· Korean · $$$$ · 1 MICHELIN Star</span></li>
-<li>Boia De <span>· Italian · $$$$ · 1 MICHELIN Star</span></li>
-<li>Elcielo Miami <span>· Latin &amp; Caribbean · $$$$ · 1 MICHELIN Star</span></li>
-<li>Ogawa <span>· Japanese &amp; Sushi · $$$$ · 1 MICHELIN Star</span></li>
-<li>Mutra <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Stubborn Seed <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Tambourine Room by Tristan Brandt <span>· European · $$$$ · 1 MICHELIN Star</span></li>
-<li>Shingo <span>· Japanese &amp; Sushi · $$$$ · 1 MICHELIN Star</span></li>
-<li>Ariete <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>The Surf Club Restaurant <span>· Mediterranean &amp; Middle Eastern · $$$$ · 1 MICHELIN Star</span></li>
-<li>Hometown Barbecue Miami <span>· BBQ · $$ · Bib Gourmand</span></li>
-<li>Phuc Yea <span>· Vietnamese · $$ · Bib Gourmand</span></li>
-<li>La Natural <span>· Pizza · $ · Bib Gourmand</span></li>
-<li>Michael&#39;s Genuine <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Double Luck <span>· Chinese · $$ · Bib Gourmand</span></li>
-<li>Sanguich De Miami <span>· Latin &amp; Caribbean · $$ · Bib Gourmand</span></li>
-<li>Ghee Indian Kitchen <span>· South Asian · $$ · Bib Gourmand</span></li>
-<li>Mandolin Aegean Bistro <span>· Mediterranean &amp; Middle Eastern · $$ · Bib Gourmand</span></li>
-<li>Bachour <span>· Bakery &amp; Sweets · $ · Bib Gourmand</span></li>
-<li>Zitz Sum <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Cotoa <span>· Latin &amp; Caribbean · $$ · Bib Gourmand</span></li>
-<li>Barra Callao <span>· Latin &amp; Caribbean · $$ · Bib Gourmand</span></li>
-<li>Caracas Bakery <span>· Bakery &amp; Sweets · $ · James Beard finalist</span></li>
-<li>ViceVersa <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Amara at Paraiso <span>· Latin &amp; Caribbean · $$ · James Beard semifinalist</span></li>
-<li>Cafe La Trova <span>· Latin &amp; Caribbean · $$$ · MICHELIN Recommended</span></li>
-<li>Bar Bucce <span>· Pizza · $ · James Beard semifinalist</span></li>
-<li>Macchialina <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Ocean Social <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>Recoveco <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Vinya <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>Ossobuco <span>· Steakhouse · $$$ · MICHELIN Recommended</span></li>
-<li>Lung Yai Thai Tapas <span>· Thai · $$$ · MICHELIN Recommended</span></li>
-<li>The Gibson Room <span>· Bar &amp; Pub · $$$ · MICHELIN Recommended</span></li>
-<li>Sunny&#39;s Steakhouse <span>· Steakhouse · $$$ · MICHELIN Recommended</span></li>
-<li>Walrus Rodeo <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
+<li><strong>L&#39;Atelier de Joël Robuchon Miami</strong><span>American &amp; Other · $$$$ · <span class="nw">2 MICHELIN Stars</span></span></li>
+<li><strong>Le Jardinier Miami</strong><span>European · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Los Félix</strong><span>Mexican · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Hiden</strong><span>Japanese &amp; Sushi · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Cote Miami</strong><span>Korean · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Boia De</strong><span>Italian · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Elcielo Miami</strong><span>Latin &amp; Caribbean · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Ogawa</strong><span>Japanese &amp; Sushi · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Mutra</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Stubborn Seed</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Tambourine Room by Tristan Brandt</strong><span>European · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Shingo</strong><span>Japanese &amp; Sushi · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Ariete</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>The Surf Club Restaurant</strong><span>Mediterranean &amp; Middle Eastern · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Hometown Barbecue Miami</strong><span>BBQ · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Phuc Yea</strong><span>Vietnamese · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>La Natural</strong><span>Pizza · $ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Michael&#39;s Genuine</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Double Luck</strong><span>Chinese · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Sanguich De Miami</strong><span>Latin &amp; Caribbean · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Ghee Indian Kitchen</strong><span>South Asian · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Mandolin Aegean Bistro</strong><span>Mediterranean &amp; Middle Eastern · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Bachour</strong><span>Bakery &amp; Sweets · $ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Zitz Sum</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Cotoa</strong><span>Latin &amp; Caribbean · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Barra Callao</strong><span>Latin &amp; Caribbean · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Caracas Bakery</strong><span>Bakery &amp; Sweets · $ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>ViceVersa</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Amara at Paraiso</strong><span>Latin &amp; Caribbean · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Cafe La Trova</strong><span>Latin &amp; Caribbean · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Bar Bucce</strong><span>Pizza · $ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Macchialina</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Ocean Social</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Recoveco</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Vinya</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Ossobuco</strong><span>Steakhouse · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Lung Yai Thai Tapas</strong><span>Thai · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>The Gibson Room</strong><span>Bar &amp; Pub · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Sunny&#39;s Steakhouse</strong><span>Steakhouse · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Walrus Rodeo</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

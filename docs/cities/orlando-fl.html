@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Orlando: 3-Day Food Itinerary","description":"A 3-day Orlando food itinerary from 60 picks: 53 with a MICHELIN Guide distinction, 1 with a James Beard honor. Planned around your budget. Swap any stop.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/orlando-fl.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Orlando: 3-Day Food Itinerary","description":"A 3-day Orlando food itinerary from 60 picks: 53 with a MICHELIN Guide distinction, 1 with a James Beard honor. Planned around your budget. Swap any stop.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/orlando-fl.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Orlando","item":"https://getfoodtrip.app/cities/orlando-fl.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Orlando","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Taino's Bakery","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"5806 Lake Underhill Rd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32807","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Coro","servesCuisine":"European","address":{"@type":"PostalAddress","streetAddress":"3022 Corrine Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32803","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"Taste of Chengdu","servesCuisine":"Chinese","address":{"@type":"PostalAddress","streetAddress":"4856 New Broad St","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32814","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"Smoke & Donuts BBQ","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"601 N Primrose Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32803","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Domu","servesCuisine":"Japanese & Sushi","address":{"@type":"PostalAddress","streetAddress":"3201 Corrine Dr","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32803","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"Strand","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"807 N Mills Ave","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32803","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Bombay Street Kitchen","servesCuisine":"South Asian","address":{"@type":"PostalAddress","streetAddress":"6215 S Orange Blossom Trl","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32809","addressCountry":"US"}}},{"@type":"ListItem","position":8,"item":{"@type":"Restaurant","name":"Isan Zaap","servesCuisine":"Thai","address":{"@type":"PostalAddress","streetAddress":"4693 Gardens Park Blvd","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32839","addressCountry":"US"}}}]}</script>
 </head>
@@ -102,46 +104,46 @@
 <h2>40 more places to eat in Orlando</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>Sorekara <span>· American &amp; Other · $$$$ · 2 MICHELIN Stars</span></li>
-<li>Kadence <span>· Japanese &amp; Sushi · $$$$ · 1 MICHELIN Star</span></li>
-<li>Camille <span>· Vietnamese · $$$$ · 1 MICHELIN Star</span></li>
-<li>Ômo by Jônt <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Soseki <span>· Japanese &amp; Sushi · $$$$ · 1 MICHELIN Star</span></li>
-<li>Sushi Saint <span>· Japanese &amp; Sushi · $$ · Bib Gourmand</span></li>
-<li>Smokemade Meats + Eats <span>· BBQ · $$ · Bib Gourmand</span></li>
-<li>Otto&#39;s High Dive <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Zaru <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>UniGirl <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>The Ravenous Pig <span>· American &amp; Other · $$ · Bib Gourmand</span></li>
-<li>Kaya <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Kabooki Sushi <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Reyes Mezcaleria <span>· Mexican · $ · James Beard semifinalist</span></li>
-<li>Primo <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Nami <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Maxine&#39;s on Shine <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Sparrow <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Walala Hand-Pulled Noodle House <span>· Chinese · $$$ · MICHELIN Recommended</span></li>
-<li>The Pinery <span>· Soul &amp; Southern · $$$ · MICHELIN Recommended</span></li>
-<li>Knife &amp; Spoon <span>· Steakhouse · $$$ · MICHELIN Recommended</span></li>
-<li>Sticky Rice <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Tori Tori <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Juju <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Black Rooster Taqueria <span>· Mexican · $ · MICHELIN Recommended</span></li>
-<li>Twenty Pho Hour <span>· Vietnamese · $$$ · MICHELIN Recommended</span></li>
-<li>June <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Se7en Bites <span>· Soul &amp; Southern · $$$ · MICHELIN Recommended</span></li>
-<li>The Polite Pig <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>Bacán <span>· Latin &amp; Caribbean · $$$ · MICHELIN Recommended</span></li>
-<li>Four Flamingos, A Richard Blais Florida Kitchen <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Shin Jung <span>· Korean · $$$ · MICHELIN Recommended</span></li>
-<li>Edoboy <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Osteria Ester <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Kappo Tsan <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Pizza Bruno <span>· Pizza · $ · MICHELIN Recommended</span></li>
-<li>Selam <span>· African · $$$ · MICHELIN Recommended</span></li>
-<li>Capa <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>YH Seafood Clubhouse <span>· Seafood · $$$ · MICHELIN Recommended</span></li>
-<li>Kai Kai BBQ &amp; Dumplings <span>· Chinese · $$$ · MICHELIN Recommended</span></li>
+<li><strong>Sorekara</strong><span>American &amp; Other · $$$$ · <span class="nw">2 MICHELIN Stars</span></span></li>
+<li><strong>Kadence</strong><span>Japanese &amp; Sushi · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Camille</strong><span>Vietnamese · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Ômo by Jônt</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Soseki</strong><span>Japanese &amp; Sushi · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Sushi Saint</strong><span>Japanese &amp; Sushi · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Smokemade Meats + Eats</strong><span>BBQ · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Otto&#39;s High Dive</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Zaru</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>UniGirl</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>The Ravenous Pig</strong><span>American &amp; Other · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Kaya</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Kabooki Sushi</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Reyes Mezcaleria</strong><span>Mexican · $ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Primo</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Nami</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Maxine&#39;s on Shine</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Sparrow</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Walala Hand-Pulled Noodle House</strong><span>Chinese · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>The Pinery</strong><span>Soul &amp; Southern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Knife &amp; Spoon</strong><span>Steakhouse · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Sticky Rice</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Tori Tori</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Juju</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Black Rooster Taqueria</strong><span>Mexican · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Twenty Pho Hour</strong><span>Vietnamese · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>June</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Se7en Bites</strong><span>Soul &amp; Southern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>The Polite Pig</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Bacán</strong><span>Latin &amp; Caribbean · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Four Flamingos, A Richard Blais Florida Kitchen</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Shin Jung</strong><span>Korean · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Edoboy</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Osteria Ester</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Kappo Tsan</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Pizza Bruno</strong><span>Pizza · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Selam</strong><span>African · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Capa</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>YH Seafood Clubhouse</strong><span>Seafood · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Kai Kai BBQ &amp; Dumplings</strong><span>Chinese · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

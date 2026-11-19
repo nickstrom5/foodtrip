@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Charleston: 3-Day Food Itinerary","description":"A 3-day Charleston food itinerary from 37 picks: 17 with a MICHELIN Guide distinction, 8 with a James Beard honor. Planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/charleston-sc.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Charleston: 3-Day Food Itinerary","description":"A 3-day Charleston food itinerary from 37 picks: 17 with a MICHELIN Guide distinction, 8 with a James Beard honor. Planned around your budget.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/charleston-sc.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Charleston","item":"https://getfoodtrip.app/cities/charleston-sc.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Charleston","numberOfItems":7,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Welton’s Tiny Bakeshop","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"682 King St","addressLocality":"Charleston","addressRegion":"SC","postalCode":"29403","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"Renzo","servesCuisine":"Pizza","address":{"@type":"PostalAddress","streetAddress":"384 Huger St #4126","addressLocality":"Charleston","addressRegion":"SC","postalCode":"29403","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"Bowens Island Restaurant","servesCuisine":"Seafood","address":{"@type":"PostalAddress","streetAddress":"1870 Bowens Island Rd","addressLocality":"Charleston","addressRegion":"SC","postalCode":"29412","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"FIG","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"232 Meeting St","addressLocality":"Charleston","addressRegion":"SC","postalCode":"29401","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Bertha's Kitchen","servesCuisine":"Soul & Southern","address":{"@type":"PostalAddress","streetAddress":"2332 Meeting Street Rd","addressLocality":"Charleston","addressRegion":"SC","postalCode":"29405","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"Rivayat Creative Indian","servesCuisine":"South Asian","address":{"@type":"PostalAddress","streetAddress":"210 Rutledge Ave","addressLocality":"Charleston","addressRegion":"SC","postalCode":"29403","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Palmira","servesCuisine":"BBQ","address":{"@type":"PostalAddress","streetAddress":"2366 Ashley River Rd","addressLocality":"Charleston","addressRegion":"SC","postalCode":"29414","addressCountry":"US"}}}]}</script>
 </head>
@@ -99,36 +101,36 @@
 <h2>30 more places to eat in Charleston</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>Malagón Mercado y Taperia <span>· German &amp; European · $$$$ · 1 MICHELIN Star</span></li>
-<li>Vern&#39;s <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Wild Common <span>· American &amp; Other · $$$$ · 1 MICHELIN Star</span></li>
-<li>Rodney Scott&#39;s BBQ <span>· BBQ · $$ · James Beard winner</span></li>
-<li>Leon&#39;s Oyster Shop <span>· Seafood · $$ · Bib Gourmand</span></li>
-<li>Merci <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Chubby Fish <span>· Seafood · $$$ · MICHELIN Recommended</span></li>
-<li>Bintu Atelier <span>· American &amp; Other · $$ · James Beard semifinalist</span></li>
-<li>Graft Wine Shop &amp; Wine Bar <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>Stems &amp; Skins <span>· Bar &amp; Pub · $$ · James Beard semifinalist</span></li>
-<li>The Establishment <span>· Seafood · $$$ · MICHELIN Recommended</span></li>
-<li>Sorelle <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Lowland <span>· Soul &amp; Southern · $$$ · MICHELIN Recommended</span></li>
-<li>Lewis Barbecue <span>· BBQ · $$ · MICHELIN Recommended</span></li>
-<li>Husk <span>· Soul &amp; Southern · $$$ · MICHELIN Recommended</span></li>
-<li>The Restaurant at Zero George <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Cane Pazzo <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>The Obstinate Daughter <span>· Soul &amp; Southern · $$$ · MICHELIN Recommended</span></li>
-<li>Anson Restaurant <span>· Soul &amp; Southern · $$ · Eats Ranked pick</span></li>
-<li>Poogan&#39;s Porch <span>· Soul &amp; Southern · $$ · Eats Ranked pick</span></li>
-<li>Hank&#39;s Seafood Restaurant <span>· Seafood · $$$ · Eats Ranked pick</span></li>
-<li>Slightly North of Broad <span>· Soul &amp; Southern · $$ · Eats Ranked pick</span></li>
-<li>Swig &amp; Swine <span>· BBQ · $$ · Eats Ranked pick</span></li>
-<li>Martin&#39;s Bar-B-Que Joint <span>· BBQ · $$ · Eats Ranked pick</span></li>
-<li>Hannibal&#39;s Kitchen <span>· Soul &amp; Southern · $$ · Eats Ranked pick</span></li>
-<li>High Cotton Charleston Restaurant <span>· American &amp; Other · $$ · Eats Ranked pick</span></li>
-<li>Page&#39;s Okra Grill <span>· Soul &amp; Southern · $$ · Eats Ranked pick</span></li>
-<li>Grace &amp; Grit <span>· Seafood · $$$ · Eats Ranked pick</span></li>
-<li>Melvin&#39;s Legendary Barbecue <span>· BBQ · $$ · Eats Ranked pick</span></li>
-<li>Acme Lowcountry Kitchen <span>· Seafood · $$$ · Eats Ranked pick</span></li>
+<li><strong>Malagón Mercado y Taperia</strong><span>German &amp; European · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Vern&#39;s</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Wild Common</strong><span>American &amp; Other · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Rodney Scott&#39;s BBQ</strong><span>BBQ · $$ · <span class="nw">James Beard winner</span></span></li>
+<li><strong>Leon&#39;s Oyster Shop</strong><span>Seafood · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Merci</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Chubby Fish</strong><span>Seafood · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Bintu Atelier</strong><span>American &amp; Other · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Graft Wine Shop &amp; Wine Bar</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>Stems &amp; Skins</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard semifinalist</span></span></li>
+<li><strong>The Establishment</strong><span>Seafood · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Sorelle</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Lowland</strong><span>Soul &amp; Southern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Lewis Barbecue</strong><span>BBQ · $$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Husk</strong><span>Soul &amp; Southern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>The Restaurant at Zero George</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Cane Pazzo</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>The Obstinate Daughter</strong><span>Soul &amp; Southern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Anson Restaurant</strong><span>Soul &amp; Southern · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Poogan&#39;s Porch</strong><span>Soul &amp; Southern · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Hank&#39;s Seafood Restaurant</strong><span>Seafood · $$$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Slightly North of Broad</strong><span>Soul &amp; Southern · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Swig &amp; Swine</strong><span>BBQ · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Martin&#39;s Bar-B-Que Joint</strong><span>BBQ · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Hannibal&#39;s Kitchen</strong><span>Soul &amp; Southern · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>High Cotton Charleston Restaurant</strong><span>American &amp; Other · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Page&#39;s Okra Grill</strong><span>Soul &amp; Southern · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Grace &amp; Grit</strong><span>Seafood · $$$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Melvin&#39;s Legendary Barbecue</strong><span>BBQ · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Acme Lowcountry Kitchen</strong><span>Seafood · $$$ · <span class="nw">Eats Ranked pick</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>

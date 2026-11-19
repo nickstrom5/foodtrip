@@ -41,7 +41,9 @@ const STYLE = `<style>
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
@@ -137,7 +139,7 @@ for (const ci of index) {
     return `<h2>Day ${day.index + 1}: about $${day.spent} a person</h2>\n${stops}${missing}`;
   }).join("\n");
   const rest = c.places.filter((p) => !inPlan.has(p.id)).slice(0, 40);
-  const more = rest.map((p) => `<li>${esc(p.n)} <span>· ${esc(p.cu)} · ${P.PRICE[p.p]} · ${esc(p.hl)}</span></li>`).join("\n");
+  const more = rest.map((p) => `<li><strong>${esc(p.n)}</strong><span>${esc(p.cu)} · ${P.PRICE[p.p]} · <span class="nw">${esc(p.hl)}</span></span></li>`).join("\n");
   const honorLine = [counts.michelin && `${counts.michelin} hold a MICHELIN Guide distinction`, counts.beard && `${counts.beard} carry a James Beard Foundation honor`].filter(Boolean).join(" and ");
   const planLink = `/#${new URLSearchParams({ c: c.id, m: SAMPLE.meals, b: SAMPLE.budget, n: 2, r: SAMPLE.seed })}`;
   const stopsFlat = plan.days.flatMap((d) => d.stops);
@@ -214,7 +216,8 @@ const urls = [...fixed, ...made.map((m) => m.path)];
 fs.writeFileSync(here + "docs/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `<url><loc>${SITE}${u}</loc><lastmod>${TODAY}</lastmod></url>`).join("\n")}\n</urlset>\n`);
 // the city links for the home page (pasted between the CITY-LINKS markers by this script)
 const home = fs.readFileSync(here + "docs/index.html", "utf8");
-const links = made.slice().sort((a, b) => a.c.name.localeCompare(b.c.name)).map((m) => `<li><a href="${m.path}">${esc(m.c.name)}</a></li>`).join("\n");
+const links = made.slice().sort((a, b) => a.c.name.localeCompare(b.c.name) || a.c.st.localeCompare(b.c.st))
+  .map((m) => `<li><a href="${m.path}">${esc(shared.has(m.c.name) ? `${m.c.name}, ${m.c.st}` : m.c.name)}</a></li>`).join("\n");
 const marked = home.replace(/(<!-- CITY-LINKS -->)[\s\S]*?(<!-- \/CITY-LINKS -->)/, `$1\n${links}\n$2`);
 if (marked !== home) fs.writeFileSync(here + "docs/index.html", marked);
 const bad = made.filter((m) => m.title.length > 60 || m.description.length > 160 || m.description.length < 120);

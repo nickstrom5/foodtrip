@@ -52,14 +52,16 @@
   .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--herb-bg); color: var(--herb); }
   .badge.mich { background: var(--gold-bg); color: var(--gold); }
   .why { font-size: 15px; color: var(--muted); margin: 6px 0 0; }
-  ul.more { padding-left: 20px; } ul.more li { margin: 4px 0; } ul.more span { color: var(--muted); }
+  ul.more { list-style: none; padding: 0; display: grid; gap: 10px; }
+  ul.more li { line-height: 1.35; } ul.more strong { font-weight: 650; }
+  ul.more span { display: block; color: var(--muted); font-size: 15px; } ul.more .nw { display: inline; white-space: nowrap; }
   ul.cities { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
   ul.cities a { display: block; background: var(--surface); border-radius: 12px; padding: 10px 12px; text-decoration: none; font-weight: 650; font-size: 16px; line-height: 1.3; }
   ul.cities span { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
   .note { font-size: 14px; color: var(--muted); }
   footer { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 16px; font-size: 14px; color: var(--muted); }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Dallas: 3-Day Food Itinerary","description":"A 3-day Dallas food itinerary from 41 picks: 27 with a MICHELIN Guide distinction, 5 with a James Beard honor. Planned around your budget. Swap any stop.","datePublished":"2026-11-12","dateModified":"2026-11-17","mainEntityOfPage":"https://getfoodtrip.app/cities/dallas-tx.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Where to Eat in Dallas: 3-Day Food Itinerary","description":"A 3-day Dallas food itinerary from 41 picks: 27 with a MICHELIN Guide distinction, 5 with a James Beard honor. Planned around your budget. Swap any stop.","datePublished":"2026-11-12","dateModified":"2026-11-19","mainEntityOfPage":"https://getfoodtrip.app/cities/dallas-tx.html","image":"https://getfoodtrip.app/og.png","author":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/"},"publisher":{"@type":"Organization","name":"FoodTrip","url":"https://getfoodtrip.app/","logo":{"@type":"ImageObject","url":"https://getfoodtrip.app/icon-512.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FoodTrip","item":"https://getfoodtrip.app/"},{"@type":"ListItem","position":2,"name":"Cities","item":"https://getfoodtrip.app/cities/"},{"@type":"ListItem","position":3,"name":"Dallas","item":"https://getfoodtrip.app/cities/dallas-tx.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"A 3-day food itinerary for Dallas","numberOfItems":7,"itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Restaurant","name":"Starship Bagel","servesCuisine":"Bakery & Sweets","address":{"@type":"PostalAddress","streetAddress":"6859 Arapaho Rd","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75248","addressCountry":"US"}}},{"@type":"ListItem","position":2,"item":{"@type":"Restaurant","name":"nonna","servesCuisine":"Italian","address":{"@type":"PostalAddress","streetAddress":"4115 Lomo Alto Dr","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75219","addressCountry":"US"}}},{"@type":"ListItem","position":3,"item":{"@type":"Restaurant","name":"Sonny Bryan's Smokehouse","servesCuisine":"BBQ","address":{"@type":"PostalAddress","streetAddress":"2202 Inwood Rd","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75235","addressCountry":"US"}}},{"@type":"ListItem","position":4,"item":{"@type":"Restaurant","name":"Gemma","servesCuisine":"American & Other","address":{"@type":"PostalAddress","streetAddress":"2323 N Henderson Ave","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75206","addressCountry":"US"}}},{"@type":"ListItem","position":5,"item":{"@type":"Restaurant","name":"Một Hai Ba","servesCuisine":"Vietnamese","address":{"@type":"PostalAddress","streetAddress":"6047 Lewis St","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75206","addressCountry":"US"}}},{"@type":"ListItem","position":6,"item":{"@type":"Restaurant","name":"Georgie","servesCuisine":"German & European","address":{"@type":"PostalAddress","streetAddress":"4514 Travis St","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75205","addressCountry":"US"}}},{"@type":"ListItem","position":7,"item":{"@type":"Restaurant","name":"Resident Taqueria","servesCuisine":"Mexican","address":{"@type":"PostalAddress","streetAddress":"9661 Audelia Rd #112","addressLocality":"Dallas","addressRegion":"TX","postalCode":"75238","addressCountry":"US"}}}]}</script>
 </head>
@@ -99,40 +101,40 @@
 <h2>34 more places to eat in Dallas</h2>
 <p>The planner swaps any stop for one of these, and uses them when your dates, meals or budget are different.</p>
 <ul class="more">
-<li>Mamani <span>· German &amp; European · $$$$ · 1 MICHELIN Star</span></li>
-<li>Tatsu Dallas <span>· Japanese &amp; Sushi · $$$$ · 1 MICHELIN Star</span></li>
-<li>Ngon Vietnamese Kitchen <span>· Vietnamese · $$ · Bib Gourmand</span></li>
-<li>Cattleack Barbeque <span>· BBQ · $$ · Bib Gourmand</span></li>
-<li>Bar Colette <span>· Bar &amp; Pub · $$ · James Beard finalist</span></li>
-<li>Lucia <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Purépecha <span>· Mexican · $ · James Beard finalist</span></li>
-<li>MĀBO <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Monarch <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Mister Charles <span>· German &amp; European · $$$ · MICHELIN Recommended</span></li>
-<li>Stock &amp; Barrel <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>El Carlos Elegante <span>· Mexican · $ · MICHELIN Recommended</span></li>
-<li>Quarter Acre <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Fond <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Sushi Kozy <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Sachet <span>· Mediterranean &amp; Middle Eastern · $$$ · MICHELIN Recommended</span></li>
-<li>Crown Block <span>· Steakhouse · $$$ · MICHELIN Recommended</span></li>
-<li>Knox Bistro <span>· German &amp; European · $$$ · MICHELIN Recommended</span></li>
-<li>Tei-An <span>· Japanese &amp; Sushi · $$$ · MICHELIN Recommended</span></li>
-<li>Written By The Seasons <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Mercat Bistro <span>· German &amp; European · $$$ · MICHELIN Recommended</span></li>
-<li>Barsotti&#39;s <span>· Italian · $$$ · MICHELIN Recommended</span></li>
-<li>Stillwell&#39;s <span>· Steakhouse · $$$ · MICHELIN Recommended</span></li>
-<li>Fearing&#39;s Restaurant <span>· Steakhouse · $$$ · MICHELIN Recommended</span></li>
-<li>Olōyō <span>· American &amp; Other · $$$ · MICHELIN Recommended</span></li>
-<li>Slow Bone BBQ <span>· BBQ · $$ · Eats Ranked pick</span></li>
-<li>E Bar Tex-Mex <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Maskaras Mexican Grill <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Mia&#39;s Tex-Mex <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Tacos Juancho <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Donde Los Tacos <span>· Mexican · $ · Eats Ranked pick</span></li>
-<li>Smokey Joe&#39;s BBQ <span>· BBQ · $$ · Eats Ranked pick</span></li>
-<li>Dragon Casa <span>· American &amp; Other · $$ · Eats Ranked pick</span></li>
-<li>Señor Oink <span>· Mexican · $ · Eats Ranked pick</span></li>
+<li><strong>Mamani</strong><span>German &amp; European · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Tatsu Dallas</strong><span>Japanese &amp; Sushi · $$$$ · <span class="nw">1 MICHELIN Star</span></span></li>
+<li><strong>Ngon Vietnamese Kitchen</strong><span>Vietnamese · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Cattleack Barbeque</strong><span>BBQ · $$ · <span class="nw">Bib Gourmand</span></span></li>
+<li><strong>Bar Colette</strong><span>Bar &amp; Pub · $$ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>Lucia</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Purépecha</strong><span>Mexican · $ · <span class="nw">James Beard finalist</span></span></li>
+<li><strong>MĀBO</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Monarch</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Mister Charles</strong><span>German &amp; European · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Stock &amp; Barrel</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>El Carlos Elegante</strong><span>Mexican · $ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Quarter Acre</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Fond</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Sushi Kozy</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Sachet</strong><span>Mediterranean &amp; Middle Eastern · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Crown Block</strong><span>Steakhouse · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Knox Bistro</strong><span>German &amp; European · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Tei-An</strong><span>Japanese &amp; Sushi · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Written By The Seasons</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Mercat Bistro</strong><span>German &amp; European · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Barsotti&#39;s</strong><span>Italian · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Stillwell&#39;s</strong><span>Steakhouse · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Fearing&#39;s Restaurant</strong><span>Steakhouse · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Olōyō</strong><span>American &amp; Other · $$$ · <span class="nw">MICHELIN Recommended</span></span></li>
+<li><strong>Slow Bone BBQ</strong><span>BBQ · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>E Bar Tex-Mex</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Maskaras Mexican Grill</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Mia&#39;s Tex-Mex</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Tacos Juancho</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Donde Los Tacos</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Smokey Joe&#39;s BBQ</strong><span>BBQ · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Dragon Casa</strong><span>American &amp; Other · $$ · <span class="nw">Eats Ranked pick</span></span></li>
+<li><strong>Señor Oink</strong><span>Mexican · $ · <span class="nw">Eats Ranked pick</span></span></li>
 </ul>
 <h2>How this plan was made</h2>
 <p>Every place on this page holds a MICHELIN Guide distinction or a James Beard Foundation honor, or was checked by hand for <a href="https://eatsranked.com/" rel="noopener">Eats Ranked</a>. Chains are left out and no restaurant pays to be listed. For each day FoodTrip picks dinner first, then lunch and breakfast, keeps to the budget, uses a different cuisine each meal and keeps the day's stops close together. No place appears twice.</p>
