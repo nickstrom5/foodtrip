@@ -19,6 +19,21 @@ struct PlanFormView: View {
     private var endDate: Binding<Date> {
         Binding(get: { Day.local(request.end) }, set: { request.end = Day.iso(local: $0) })
     }
+    /// Says before planning when the city has fewer breakfast or treat picks than the trip has days. Same text as
+    /// `mealNote` in docs/app.js.
+    static func mealNote(city: City, meals: Int, days: Int) -> String? {
+        func count(_ bit: Int) -> Int { city.places.filter { $0.m & bit != 0 }.count }
+        var gaps: [(Int, String, String)] = []
+        if meals >= 3 { let b = count(Slot.breakfast.bit); if b < days { gaps.append((b, "breakfast", "mornings")) } }
+        if meals >= 4 { let t = count(Slot.snack.bit); if t < days { gaps.append((t, "afternoon treat", "afternoons")) } }
+        guard !gaps.isEmpty else { return nil }
+        return gaps.enumerated().map { i, gap in
+            let (n, what, when) = gap
+            let who = i == 0 ? "\(city.name) has" : "It has"
+            return n == 0 ? "\(who) no \(what) picks yet, so \(when) stay open."
+                          : "\(who) \(n) \(what) pick\(n == 1 ? "" : "s"), so \(days - n) of your \(days) \(when) stay open."
+        }.joined(separator: " ")
+    }
     private static let mealNotes = [1: "Dinner", 2: "Lunch and dinner", 3: "Breakfast, lunch and dinner", 4: "Breakfast, lunch, an afternoon treat and dinner"]
 
     var body: some View {
@@ -57,7 +72,12 @@ struct PlanFormView: View {
                 } header: {
                     Text("Meals a day")
                 } footer: {
-                    Text(Self.mealNotes[request.meals] ?? "")
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(Self.mealNotes[request.meals] ?? "")
+                        if let city, let note = Self.mealNote(city: city, meals: request.meals, days: request.days) {
+                            Text(note).foregroundStyle(.orange)
+                        }
+                    }
                 }
 
                 Section {

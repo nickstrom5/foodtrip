@@ -97,10 +97,33 @@
   }
 
   // ---- form
+  // Says before planning when a city has fewer breakfast or treat picks than the trip has days: those slots stay open.
+  // The iPhone app's PlanFormView.mealNote says the same thing.
+  function mealNote(city, meals, days) {
+    const count = (bit) => city.places.filter((p) => p.m & bit).length;
+    const gaps = [];
+    if (meals >= 3) { const b = count(1); if (b < days) gaps.push([b, "breakfast", "mornings"]); }
+    if (meals >= 4) { const t = count(8); if (t < days) gaps.push([t, "afternoon treat", "afternoons"]); }
+    if (!gaps.length) return "";
+    return gaps.map(([n, what, when], i) => {
+      const who = i === 0 ? `${city.name} has` : "It has";
+      return n === 0 ? `${who} no ${what} picks yet, so ${when} stay open.`
+        : `${who} ${n} ${what} pick${n === 1 ? "" : "s"}, so ${days - n} of your ${days} ${when} stay open.`;
+    }).join(" ");
+  }
+  async function updateMealNote() {
+    const el = $("meal-note");
+    try {
+      const city = await loadCity($("city").value);
+      const text = mealNote(city, state.meals, P.dayCount($("start").value || state.start, $("end").value || state.end));
+      el.textContent = text; el.hidden = !text;
+    } catch { el.hidden = true; }
+  }
   function syncForm() {
     $("city").value = state.city; $("start").value = state.start; $("end").value = state.end;
     $("budget").value = state.budget; $("budget-out").textContent = "$" + state.budget; $("party").textContent = state.party;
     document.querySelectorAll("#meals button").forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.m === state.meals)));
+    if (cities.length) updateMealNote();
   }
   function readForm() {
     state.city = $("city").value; state.start = $("start").value; state.end = $("end").value;
@@ -225,6 +248,7 @@
     $("end").min = $("start").value;
     // keep the choice: the meals and people buttons redraw the form from `state`, which used to put the old city and dates back
     readForm();
+    updateMealNote();
   }));
   $("budget").addEventListener("input", () => { state.budget = +$("budget").value; $("budget-out").textContent = "$" + state.budget; });
   $("meals").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; readForm(); state.meals = +b.dataset.m; syncForm(); });

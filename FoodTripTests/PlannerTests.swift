@@ -93,4 +93,14 @@ final class PlannerTests: XCTestCase {
         // the count survives a relaunch
         XCTAssertEqual(AppModel(file: file, defaults: defaults).freeTripsLeft, 0)
     }
+
+    func testMealNoteNamesTheGap() throws {
+        let vegas = try XCTUnwrap(file.cities.first { $0.id == "las-vegas-nv" })
+        XCTAssertEqual(PlanFormView.mealNote(city: vegas, meals: 3, days: 3), "Las Vegas has no breakfast picks yet, so mornings stay open.")
+        XCTAssertNil(PlanFormView.mealNote(city: vegas, meals: 2, days: 3))
+        XCTAssertEqual(PlanFormView.mealNote(city: vegas, meals: 4, days: 3),
+                       "Las Vegas has no breakfast picks yet, so mornings stay open. It has no afternoon treat picks yet, so afternoons stay open.")
+        let chicago = try XCTUnwrap(file.cities.first { $0.id == "chicago-il" })
+        XCTAssertNil(PlanFormView.mealNote(city: chicago, meals: 4, days: 3))
+    }
 }

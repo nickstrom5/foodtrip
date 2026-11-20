@@ -66,11 +66,26 @@ TREAT = re.compile(r"\b(ice cream|gelato|creamery|custard|donuts?|doughnuts?|bak
                    r"sweets|beignets?|p[aâ]tisserie|pastry|pastries|pies)\b", re.I)
 
 
-def meals_for(cuisine, price, name=""):
+# What a place is known for (its Eats Ranked dish or note) can say it serves breakfast or treats: "breakfast tacos",
+# "a stop on the Breakfast Burrito Byway", "frozen custard". Only explicit words count: "grits" and "pastry chef" also
+# describe dinner restaurants and bars, so they don't.
+SAYS_MORNING = re.compile(r"\b(breakfast|brunch|biscuits?|pancakes?|waffles?|migas|chilaquiles|kolaches?|beignets?|"
+                          r"donuts?|doughnuts?|bagels?|french toast)\b", re.I)
+SAYS_TREAT = re.compile(r"\b(ice cream|gelato|frozen custard|custard|sno-?balls?|shave ice|shaved ice|milkshakes?|malts?|"
+                        r"paletas?|churros?|beignets?|donuts?|doughnuts?|pie shop|cupcakes?)\b", re.I)
+NOT_EVIDENCE = re.compile(r"pastry chef|or baker|baker \d{4}|ice cream truck|waffle (fries|cones?)", re.I)   # history, sides
+
+
+def meals_for(cuisine, price, name="", known_for=""):
     m = MEALS.get(cuisine, L | D)
     if price <= 2 and MORNING.search(name):
         m |= B
     if price <= 2 and TREAT.search(name):
+        m |= S
+    said = NOT_EVIDENCE.sub("", known_for or "")
+    if price <= 2 and SAYS_MORNING.search(said):
+        m |= B
+    if price <= 2 and SAYS_TREAT.search(said):
         m |= S
     if price >= 4:
         m &= D          # tasting menus are dinner
@@ -179,7 +194,7 @@ def build_states(out):
             why = p.get("dish") or p.get("note") or p.get("jbf")
             out.setdefault((city, abbr), []).append({
                 "id": f"{st}-{p['id']}", "n": p.get("aka") and p["n"] or p["n"], "a": p.get("a") or "", "z": p.get("z") or "",
-                "la": round(p["la"], 5), "lo": round(p["lo"], 5), "cu": cu, "p": price, "pe": 1, "m": meals_for(cu, price, p["n"]),
+                "la": round(p["la"], 5), "lo": round(p["lo"], 5), "cu": cu, "p": price, "pe": 1, "m": meals_for(cu, price, p["n"], why or ""),
                 "hl": honor, "w": why, "r": rank(mi, h, hc, oldest), "hd": hood,
             })
             n += 1
@@ -216,7 +231,7 @@ def build_chicago(out):
         out.setdefault(("Chicago", "IL"), []).append({
             "id": f"chi-{r['id']}", "n": r["name"], "a": r["addr"] or "", "z": r["zip"] or "", "la": round(r["lat"], 5),
             "lo": round(r["lon"], 5), "cu": cu, "p": price, "pe": 0 if r["price"] and not r["price_est"] else 1,
-            "m": meals_for(cu, price, r["name"]), "hl": honor, "w": r["icon"] or (jbf or None), "r": s, "hd": r["hood"],
+            "m": meals_for(cu, price, r["name"], r["icon"] or ""), "hl": honor, "w": r["icon"] or (jbf or None), "r": s, "hd": r["hood"],
         })
         n += 1
     print(f"  chicago: {n} places", file=sys.stderr)
